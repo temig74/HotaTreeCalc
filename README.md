@@ -5,6 +5,7 @@ Hota tree calc 1.0
 - Some information about tree generation can be found here: http://heroescommunity.com/viewthread.php3?TID=17812&pagenumber=12
 - This program does NOT interact with Hota memory!
 - It's just a help resource, like Heroes3 assist (https://www.heroes3assist.com/) that can calculate tree number from a given first level-ups and build a specific tree.
+- To run binary release you need win > win7, or you can install python and pyside6 and run main.py 
 
 - Another useful information resources:
 - Fizmig: https://vk.com/fizmig
