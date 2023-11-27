@@ -545,7 +545,7 @@ class Ui_MainWindow(object):
         self.tab_3.setObjectName(u"tab_3")
         self.label_15 = QLabel(self.tab_3)
         self.label_15.setObjectName(u"label_15")
-        self.label_15.setGeometry(QRect(10, 10, 721, 331))
+        self.label_15.setGeometry(QRect(10, 10, 721, 371))
         font = QFont()
         font.setPointSize(14)
         font.setBold(True)
@@ -560,7 +560,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.tabWidget.setCurrentIndex(1)
+        self.tabWidget.setCurrentIndex(0)
         self.cmb_start1_level.setCurrentIndex(1)
         self.cmb_start2_level.setCurrentIndex(1)
         self.cmb_skill1_level.setCurrentIndex(1)
@@ -701,7 +701,9 @@ class Ui_MainWindow(object):
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Another useful information resources:</p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><a href=\"https://vk.com/fizmig\"><span style=\" text-decoration: underline; color:#0078d4;\">Fizmig</span></a></p>\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>", None))
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">If you like this program, you can <a href=\" https://github.com/temig74/HotaTreeCalc/blob/master/"
+                        "README.md\"><span style=\" text-decoration: underline; color:#0078d4;\">donate</span></a> author (view readme)</p></body></html>", None))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_3), QCoreApplication.translate("MainWindow", u"About", None))
     # retranslateUi
 

@@ -10,6 +10,11 @@ from herostate2 import HeroState, find_tree_number
 
 # pyside6-uic.exe .\tree_calc.ui -o ui_main.py # to import new ui
 
+##################################################################
+# Hota Tree Calc
+# Idea and design based on LMOracle by AlexSpl: https://handbookhmm.ru/forum/viewtopic.php?f=8&t=42
+##################################################################
+
 
 # modified QTreeWidgetItem that keeps hero state on every step in skilltree
 class SkillItem(QTreeWidgetItem):
