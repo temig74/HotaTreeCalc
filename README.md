@@ -6,7 +6,7 @@ Hota tree calc 1.0
 - This program does NOT interact with Hota memory!
 - It's just a help resource, like Heroes3 assist (https://www.heroes3assist.com/) that can calculate tree number from a given first level-ups and build a specific tree.
 - To run binary release you need win > win7, or you can install python and pyside6 and run main.py 
--
+- 
 - I know about rule that skilltree view in program is illegal in online games.
 And this rule was added (how i think) because of LMOracle program,
 that can read tree number from memory of the program.
