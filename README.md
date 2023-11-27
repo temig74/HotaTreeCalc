@@ -9,4 +9,7 @@ Hota tree calc 1.0
 - Another useful information resources:
 - Fizmig: https://vk.com/fizmig
 
-- If you like this program, you can donate author: 5536 9138 8657 7465
+- If you like this program, you can donate author:
+- -5536 9138 8657 7465 Tinkoff
+- - https://boosty.to/temig/donate
+- - ETH 0xcd52973C06Fb68834570107F1D2b0d90d64D08F1
