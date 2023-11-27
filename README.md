@@ -4,7 +4,7 @@ Hota tree calc 1.0
 - Idea and design based on LMOracle: https://handbookhmm.ru/forum/viewtopic.php?f=8&t=42. Thanks to it's author - AlexSpl
 - Some information about tree generation can be found here: http://heroescommunity.com/viewthread.php3?TID=17812&pagenumber=12
 - This program does NOT interact with Hota memory!
-- It's just a help resource (like Heroes3 assist) that can calculate tree number from a given first level-ups and build a specific tree.
+- It's just a help resource, like Heroes3 assist (https://www.heroes3assist.com/) that can calculate tree number from a given first level-ups and build a specific tree.
 
 - Another useful information resources:
 - Fizmig: https://vk.com/fizmig
