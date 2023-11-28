@@ -11,7 +11,7 @@ Hota tree calc 1.0
 And this rule was added (how i think) because of LMOracle program,
 that can read tree number from memory of the program.
 In my opinion, all programs that interact with memory of the game should be illegal in online.
-But all other calculators must be legal.
+But all other calculators (and this calculator program) must be legal.
 All players should be in equal conditions and choose whether to use calculators or not.
 -
 - You can use Herostate class and it's methods in your programs, if you wish, but i only ask to mention HotaTreeCalc by Temig and LMOracle by AlexSpl.
