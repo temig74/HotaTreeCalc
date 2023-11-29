@@ -8,7 +8,7 @@
     <x>0</x>
     <y>0</y>
     <width>866</width>
-    <height>760</height>
+    <height>762</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -30,7 +30,7 @@
    </size>
   </property>
   <property name="windowTitle">
-   <string>Hota tree calc</string>
+   <string>Hota tree calc 1.02</string>
   </property>
   <property name="iconSize">
    <size>
@@ -494,8 +494,14 @@ li.checked::marker { content: &quot;\2612&quot;; }
                <x>10</x>
                <y>10</y>
                <width>171</width>
-               <height>251</height>
+               <height>250</height>
               </rect>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>250</height>
+              </size>
              </property>
              <property name="title">
               <string>Current skills:</string>
@@ -860,8 +866,8 @@ li.checked::marker { content: &quot;\2612&quot;; }
             <widget class="QPushButton" name="btn_build_tree">
              <property name="geometry">
               <rect>
-               <x>10</x>
-               <y>490</y>
+               <x>13</x>
+               <y>410</y>
                <width>171</width>
                <height>24</height>
               </rect>
@@ -870,13 +876,207 @@ li.checked::marker { content: &quot;\2612&quot;; }
               <string>Build tree</string>
              </property>
             </widget>
+            <widget class="QGroupBox" name="groupBox_3">
+             <property name="geometry">
+              <rect>
+               <x>10</x>
+               <y>440</y>
+               <width>171</width>
+               <height>171</height>
+              </rect>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>171</width>
+               <height>171</height>
+              </size>
+             </property>
+             <property name="title">
+              <string>Fastest ways to</string>
+             </property>
+             <widget class="QComboBox" name="cmb_skill_search">
+              <property name="geometry">
+               <rect>
+                <x>6</x>
+                <y>17</y>
+                <width>91</width>
+                <height>22</height>
+               </rect>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>85</width>
+                <height>0</height>
+               </size>
+              </property>
+             </widget>
+             <widget class="QComboBox" name="cmb_skill_search_level">
+              <property name="geometry">
+               <rect>
+                <x>106</x>
+                <y>17</y>
+                <width>60</width>
+                <height>22</height>
+               </rect>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>60</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>60</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <item>
+               <property name="text">
+                <string>Basic</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Advanced</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Expert</string>
+               </property>
+              </item>
+             </widget>
+             <widget class="QPushButton" name="btn_find_way">
+              <property name="geometry">
+               <rect>
+                <x>5</x>
+                <y>42</y>
+                <width>161</width>
+                <height>24</height>
+               </rect>
+              </property>
+              <property name="text">
+               <string>Find</string>
+              </property>
+             </widget>
+             <widget class="QLabel" name="label_11">
+              <property name="geometry">
+               <rect>
+                <x>10</x>
+                <y>70</y>
+                <width>91</width>
+                <height>16</height>
+               </rect>
+              </property>
+              <property name="text">
+               <string>Unwanted skills:</string>
+              </property>
+             </widget>
+             <widget class="QTextEdit" name="te_unwanted_skills">
+              <property name="geometry">
+               <rect>
+                <x>10</x>
+                <y>90</y>
+                <width>151</width>
+                <height>71</height>
+               </rect>
+              </property>
+              <property name="html">
+               <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+hr { height: 1px; border-width: 0; }
+li.unchecked::marker { content: &quot;\2610&quot;; }
+li.checked::marker { content: &quot;\2612&quot;; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;eagle eye&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;learning&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;first aid&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+             </widget>
+            </widget>
+            <widget class="QWidget" name="layoutWidget">
+             <property name="geometry">
+              <rect>
+               <x>12</x>
+               <y>380</y>
+               <width>171</width>
+               <height>24</height>
+              </rect>
+             </property>
+             <layout class="QHBoxLayout" name="horizontalLayout_8">
+              <property name="spacing">
+               <number>1</number>
+              </property>
+              <item>
+               <widget class="QLabel" name="label_10">
+                <property name="text">
+                 <string>PRI</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QSpinBox" name="sb_defence">
+                <property name="minimumSize">
+                 <size>
+                  <width>37</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="value">
+                 <number>2</number>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QSpinBox" name="sb_attack">
+                <property name="minimumSize">
+                 <size>
+                  <width>37</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="value">
+                 <number>2</number>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QSpinBox" name="sb_knowledge">
+                <property name="minimumSize">
+                 <size>
+                  <width>37</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="minimum">
+                 <number>1</number>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QSpinBox" name="sb_sp">
+                <property name="minimumSize">
+                 <size>
+                  <width>37</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="minimum">
+                 <number>1</number>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
             <widget class="QWidget" name="layoutWidget">
              <property name="geometry">
               <rect>
                <x>13</x>
-               <y>267</y>
-               <width>170</width>
-               <height>220</height>
+               <y>268</y>
+               <width>171</width>
+               <height>108</height>
               </rect>
              </property>
              <layout class="QFormLayout" name="formLayout_2">
@@ -960,142 +1160,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                 </property>
                </widget>
               </item>
-              <item row="4" column="0">
-               <widget class="QLabel" name="label_10">
-                <property name="text">
-                 <string>Attack</string>
-                </property>
-               </widget>
-              </item>
-              <item row="4" column="1">
-               <widget class="QSpinBox" name="sb_attack">
-                <property name="value">
-                 <number>2</number>
-                </property>
-               </widget>
-              </item>
-              <item row="5" column="0">
-               <widget class="QLabel" name="label_11">
-                <property name="text">
-                 <string>Defence</string>
-                </property>
-               </widget>
-              </item>
-              <item row="5" column="1">
-               <widget class="QSpinBox" name="sb_defence">
-                <property name="value">
-                 <number>2</number>
-                </property>
-               </widget>
-              </item>
-              <item row="6" column="0">
-               <widget class="QLabel" name="label_12">
-                <property name="text">
-                 <string>SP</string>
-                </property>
-               </widget>
-              </item>
-              <item row="6" column="1">
-               <widget class="QSpinBox" name="sb_sp">
-                <property name="minimum">
-                 <number>1</number>
-                </property>
-               </widget>
-              </item>
-              <item row="7" column="0">
-               <widget class="QLabel" name="label_13">
-                <property name="text">
-                 <string>Knowledge</string>
-                </property>
-               </widget>
-              </item>
-              <item row="7" column="1">
-               <widget class="QSpinBox" name="sb_knowledge">
-                <property name="minimum">
-                 <number>1</number>
-                </property>
-               </widget>
-              </item>
              </layout>
-            </widget>
-            <widget class="QGroupBox" name="groupBox_3">
-             <property name="geometry">
-              <rect>
-               <x>10</x>
-               <y>520</y>
-               <width>171</width>
-               <height>71</height>
-              </rect>
-             </property>
-             <property name="title">
-              <string>Fastest ways to</string>
-             </property>
-             <widget class="QComboBox" name="cmb_skill_search">
-              <property name="geometry">
-               <rect>
-                <x>6</x>
-                <y>17</y>
-                <width>91</width>
-                <height>22</height>
-               </rect>
-              </property>
-              <property name="minimumSize">
-               <size>
-                <width>85</width>
-                <height>0</height>
-               </size>
-              </property>
-             </widget>
-             <widget class="QComboBox" name="cmb_skill_search_level">
-              <property name="geometry">
-               <rect>
-                <x>106</x>
-                <y>17</y>
-                <width>60</width>
-                <height>22</height>
-               </rect>
-              </property>
-              <property name="minimumSize">
-               <size>
-                <width>60</width>
-                <height>0</height>
-               </size>
-              </property>
-              <property name="maximumSize">
-               <size>
-                <width>60</width>
-                <height>16777215</height>
-               </size>
-              </property>
-              <item>
-               <property name="text">
-                <string>Basic</string>
-               </property>
-              </item>
-              <item>
-               <property name="text">
-                <string>Advanced</string>
-               </property>
-              </item>
-              <item>
-               <property name="text">
-                <string>Expert</string>
-               </property>
-              </item>
-             </widget>
-             <widget class="QPushButton" name="btn_find_way">
-              <property name="geometry">
-               <rect>
-                <x>5</x>
-                <y>42</y>
-                <width>161</width>
-                <height>24</height>
-               </rect>
-              </property>
-              <property name="text">
-               <string>Find</string>
-              </property>
-             </widget>
             </widget>
            </widget>
           </item>
@@ -1173,7 +1238,7 @@ hr { height: 1px; border-width: 0; }
 li.unchecked::marker { content: &quot;\2610&quot;; }
 li.checked::marker { content: &quot;\2612&quot;; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI'; font-size:14pt; font-weight:700; font-style:normal;&quot;&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:20pt;&quot;&gt;Hota tree calc 1.0&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:20pt;&quot;&gt;Hota tree calc 1.02&lt;/span&gt;&lt;/p&gt;
 &lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Author: Temig (temig7487@gmail.com)&lt;/p&gt;
 &lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Idea and design based on &lt;a href=&quot;https://handbookhmm.ru/forum/viewtopic.php?f=8&amp;amp;t=42&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0078d4;&quot;&gt;LMOracle.&lt;/span&gt;&lt;/a&gt; Thanks to it's author - AlexSpl&lt;/p&gt;
 &lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Some information about tree generation can be found &lt;a href=&quot;http://heroescommunity.com/viewthread.php3?TID=17812&amp;amp;pagenumber=12&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0078d4;&quot;&gt;here&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;

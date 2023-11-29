@@ -26,7 +26,7 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(866, 760)
+        MainWindow.resize(866, 762)
         sizePolicy = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -258,7 +258,8 @@ class Ui_MainWindow(object):
         self.groupBox_2.setMinimumSize(QSize(190, 520))
         self.groupBox = QGroupBox(self.groupBox_2)
         self.groupBox.setObjectName(u"groupBox")
-        self.groupBox.setGeometry(QRect(10, 10, 171, 251))
+        self.groupBox.setGeometry(QRect(10, 10, 171, 250))
+        self.groupBox.setMinimumSize(QSize(0, 250))
         self.layoutWidget1 = QWidget(self.groupBox)
         self.layoutWidget1.setObjectName(u"layoutWidget1")
         self.layoutWidget1.setGeometry(QRect(11, 21, 153, 220))
@@ -395,112 +396,11 @@ class Ui_MainWindow(object):
 
         self.btn_build_tree = QPushButton(self.groupBox_2)
         self.btn_build_tree.setObjectName(u"btn_build_tree")
-        self.btn_build_tree.setGeometry(QRect(10, 490, 171, 24))
-        self.layoutWidget2 = QWidget(self.groupBox_2)
-        self.layoutWidget2.setObjectName(u"layoutWidget2")
-        self.layoutWidget2.setGeometry(QRect(13, 267, 170, 220))
-        self.formLayout_2 = QFormLayout(self.layoutWidget2)
-        self.formLayout_2.setObjectName(u"formLayout_2")
-        self.formLayout_2.setContentsMargins(0, 0, 0, 0)
-        self.label_6 = QLabel(self.layoutWidget2)
-        self.label_6.setObjectName(u"label_6")
-
-        self.formLayout_2.setWidget(0, QFormLayout.LabelRole, self.label_6)
-
-        self.sb_tree_num = QSpinBox(self.layoutWidget2)
-        self.sb_tree_num.setObjectName(u"sb_tree_num")
-        self.sb_tree_num.setMinimum(1)
-        self.sb_tree_num.setMaximum(255)
-
-        self.formLayout_2.setWidget(0, QFormLayout.FieldRole, self.sb_tree_num)
-
-        self.label_7 = QLabel(self.layoutWidget2)
-        self.label_7.setObjectName(u"label_7")
-
-        self.formLayout_2.setWidget(1, QFormLayout.LabelRole, self.label_7)
-
-        self.sb_cur_level = QSpinBox(self.layoutWidget2)
-        self.sb_cur_level.setObjectName(u"sb_cur_level")
-        self.sb_cur_level.setMinimum(1)
-        self.sb_cur_level.setMaximum(30)
-
-        self.formLayout_2.setWidget(1, QFormLayout.FieldRole, self.sb_cur_level)
-
-        self.label_8 = QLabel(self.layoutWidget2)
-        self.label_8.setObjectName(u"label_8")
-        self.label_8.setWordWrap(True)
-
-        self.formLayout_2.setWidget(2, QFormLayout.LabelRole, self.label_8)
-
-        self.sb_wisdom_counter = QSpinBox(self.layoutWidget2)
-        self.sb_wisdom_counter.setObjectName(u"sb_wisdom_counter")
-        self.sb_wisdom_counter.setMinimum(0)
-        self.sb_wisdom_counter.setMaximum(30)
-        self.sb_wisdom_counter.setValue(0)
-
-        self.formLayout_2.setWidget(2, QFormLayout.FieldRole, self.sb_wisdom_counter)
-
-        self.label_9 = QLabel(self.layoutWidget2)
-        self.label_9.setObjectName(u"label_9")
-        self.label_9.setWordWrap(True)
-
-        self.formLayout_2.setWidget(3, QFormLayout.LabelRole, self.label_9)
-
-        self.sb_magic_counter = QSpinBox(self.layoutWidget2)
-        self.sb_magic_counter.setObjectName(u"sb_magic_counter")
-        self.sb_magic_counter.setMinimum(0)
-        self.sb_magic_counter.setMaximum(30)
-        self.sb_magic_counter.setValue(0)
-
-        self.formLayout_2.setWidget(3, QFormLayout.FieldRole, self.sb_magic_counter)
-
-        self.label_10 = QLabel(self.layoutWidget2)
-        self.label_10.setObjectName(u"label_10")
-
-        self.formLayout_2.setWidget(4, QFormLayout.LabelRole, self.label_10)
-
-        self.sb_attack = QSpinBox(self.layoutWidget2)
-        self.sb_attack.setObjectName(u"sb_attack")
-        self.sb_attack.setValue(2)
-
-        self.formLayout_2.setWidget(4, QFormLayout.FieldRole, self.sb_attack)
-
-        self.label_11 = QLabel(self.layoutWidget2)
-        self.label_11.setObjectName(u"label_11")
-
-        self.formLayout_2.setWidget(5, QFormLayout.LabelRole, self.label_11)
-
-        self.sb_defence = QSpinBox(self.layoutWidget2)
-        self.sb_defence.setObjectName(u"sb_defence")
-        self.sb_defence.setValue(2)
-
-        self.formLayout_2.setWidget(5, QFormLayout.FieldRole, self.sb_defence)
-
-        self.label_12 = QLabel(self.layoutWidget2)
-        self.label_12.setObjectName(u"label_12")
-
-        self.formLayout_2.setWidget(6, QFormLayout.LabelRole, self.label_12)
-
-        self.sb_sp = QSpinBox(self.layoutWidget2)
-        self.sb_sp.setObjectName(u"sb_sp")
-        self.sb_sp.setMinimum(1)
-
-        self.formLayout_2.setWidget(6, QFormLayout.FieldRole, self.sb_sp)
-
-        self.label_13 = QLabel(self.layoutWidget2)
-        self.label_13.setObjectName(u"label_13")
-
-        self.formLayout_2.setWidget(7, QFormLayout.LabelRole, self.label_13)
-
-        self.sb_knowledge = QSpinBox(self.layoutWidget2)
-        self.sb_knowledge.setObjectName(u"sb_knowledge")
-        self.sb_knowledge.setMinimum(1)
-
-        self.formLayout_2.setWidget(7, QFormLayout.FieldRole, self.sb_knowledge)
-
+        self.btn_build_tree.setGeometry(QRect(13, 410, 171, 24))
         self.groupBox_3 = QGroupBox(self.groupBox_2)
         self.groupBox_3.setObjectName(u"groupBox_3")
-        self.groupBox_3.setGeometry(QRect(10, 520, 171, 71))
+        self.groupBox_3.setGeometry(QRect(10, 440, 171, 171))
+        self.groupBox_3.setMinimumSize(QSize(171, 171))
         self.cmb_skill_search = QComboBox(self.groupBox_3)
         self.cmb_skill_search.setObjectName(u"cmb_skill_search")
         self.cmb_skill_search.setGeometry(QRect(6, 17, 91, 22))
@@ -516,6 +416,110 @@ class Ui_MainWindow(object):
         self.btn_find_way = QPushButton(self.groupBox_3)
         self.btn_find_way.setObjectName(u"btn_find_way")
         self.btn_find_way.setGeometry(QRect(5, 42, 161, 24))
+        self.label_11 = QLabel(self.groupBox_3)
+        self.label_11.setObjectName(u"label_11")
+        self.label_11.setGeometry(QRect(10, 70, 91, 16))
+        self.te_unwanted_skills = QTextEdit(self.groupBox_3)
+        self.te_unwanted_skills.setObjectName(u"te_unwanted_skills")
+        self.te_unwanted_skills.setGeometry(QRect(10, 90, 151, 71))
+        self.layoutWidget2 = QWidget(self.groupBox_2)
+        self.layoutWidget2.setObjectName(u"layoutWidget2")
+        self.layoutWidget2.setGeometry(QRect(12, 380, 171, 24))
+        self.horizontalLayout_8 = QHBoxLayout(self.layoutWidget2)
+        self.horizontalLayout_8.setSpacing(1)
+        self.horizontalLayout_8.setObjectName(u"horizontalLayout_8")
+        self.horizontalLayout_8.setContentsMargins(0, 0, 0, 0)
+        self.label_10 = QLabel(self.layoutWidget2)
+        self.label_10.setObjectName(u"label_10")
+
+        self.horizontalLayout_8.addWidget(self.label_10)
+
+        self.sb_defence = QSpinBox(self.layoutWidget2)
+        self.sb_defence.setObjectName(u"sb_defence")
+        self.sb_defence.setMinimumSize(QSize(37, 0))
+        self.sb_defence.setValue(2)
+
+        self.horizontalLayout_8.addWidget(self.sb_defence)
+
+        self.sb_attack = QSpinBox(self.layoutWidget2)
+        self.sb_attack.setObjectName(u"sb_attack")
+        self.sb_attack.setMinimumSize(QSize(37, 0))
+        self.sb_attack.setValue(2)
+
+        self.horizontalLayout_8.addWidget(self.sb_attack)
+
+        self.sb_knowledge = QSpinBox(self.layoutWidget2)
+        self.sb_knowledge.setObjectName(u"sb_knowledge")
+        self.sb_knowledge.setMinimumSize(QSize(37, 0))
+        self.sb_knowledge.setMinimum(1)
+
+        self.horizontalLayout_8.addWidget(self.sb_knowledge)
+
+        self.sb_sp = QSpinBox(self.layoutWidget2)
+        self.sb_sp.setObjectName(u"sb_sp")
+        self.sb_sp.setMinimumSize(QSize(37, 0))
+        self.sb_sp.setMinimum(1)
+
+        self.horizontalLayout_8.addWidget(self.sb_sp)
+
+        self.layoutWidget3 = QWidget(self.groupBox_2)
+        self.layoutWidget3.setObjectName(u"layoutWidget3")
+        self.layoutWidget3.setGeometry(QRect(13, 268, 171, 108))
+        self.formLayout_2 = QFormLayout(self.layoutWidget3)
+        self.formLayout_2.setObjectName(u"formLayout_2")
+        self.formLayout_2.setContentsMargins(0, 0, 0, 0)
+        self.label_6 = QLabel(self.layoutWidget3)
+        self.label_6.setObjectName(u"label_6")
+
+        self.formLayout_2.setWidget(0, QFormLayout.LabelRole, self.label_6)
+
+        self.sb_tree_num = QSpinBox(self.layoutWidget3)
+        self.sb_tree_num.setObjectName(u"sb_tree_num")
+        self.sb_tree_num.setMinimum(1)
+        self.sb_tree_num.setMaximum(255)
+
+        self.formLayout_2.setWidget(0, QFormLayout.FieldRole, self.sb_tree_num)
+
+        self.label_7 = QLabel(self.layoutWidget3)
+        self.label_7.setObjectName(u"label_7")
+
+        self.formLayout_2.setWidget(1, QFormLayout.LabelRole, self.label_7)
+
+        self.sb_cur_level = QSpinBox(self.layoutWidget3)
+        self.sb_cur_level.setObjectName(u"sb_cur_level")
+        self.sb_cur_level.setMinimum(1)
+        self.sb_cur_level.setMaximum(30)
+
+        self.formLayout_2.setWidget(1, QFormLayout.FieldRole, self.sb_cur_level)
+
+        self.label_8 = QLabel(self.layoutWidget3)
+        self.label_8.setObjectName(u"label_8")
+        self.label_8.setWordWrap(True)
+
+        self.formLayout_2.setWidget(2, QFormLayout.LabelRole, self.label_8)
+
+        self.sb_wisdom_counter = QSpinBox(self.layoutWidget3)
+        self.sb_wisdom_counter.setObjectName(u"sb_wisdom_counter")
+        self.sb_wisdom_counter.setMinimum(0)
+        self.sb_wisdom_counter.setMaximum(30)
+        self.sb_wisdom_counter.setValue(0)
+
+        self.formLayout_2.setWidget(2, QFormLayout.FieldRole, self.sb_wisdom_counter)
+
+        self.label_9 = QLabel(self.layoutWidget3)
+        self.label_9.setObjectName(u"label_9")
+        self.label_9.setWordWrap(True)
+
+        self.formLayout_2.setWidget(3, QFormLayout.LabelRole, self.label_9)
+
+        self.sb_magic_counter = QSpinBox(self.layoutWidget3)
+        self.sb_magic_counter.setObjectName(u"sb_magic_counter")
+        self.sb_magic_counter.setMinimum(0)
+        self.sb_magic_counter.setMaximum(30)
+        self.sb_magic_counter.setValue(0)
+
+        self.formLayout_2.setWidget(3, QFormLayout.FieldRole, self.sb_magic_counter)
+
 
         self.horizontalLayout_2.addWidget(self.groupBox_2)
 
@@ -577,7 +581,7 @@ class Ui_MainWindow(object):
     # setupUi
 
     def retranslateUi(self, MainWindow):
-        MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"Hota tree calc", None))
+        MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"Hota tree calc 1.02", None))
         self.actionhelp.setText(QCoreApplication.translate("MainWindow", u"help", None))
         self.actionabout.setText(QCoreApplication.translate("MainWindow", u"about", None))
         self.label.setText(QCoreApplication.translate("MainWindow", u"Hero class", None))
@@ -667,20 +671,28 @@ class Ui_MainWindow(object):
         self.cmb_skill8_level.setItemText(3, QCoreApplication.translate("MainWindow", u"Expert", None))
 
         self.btn_build_tree.setText(QCoreApplication.translate("MainWindow", u"Build tree", None))
-        self.label_6.setText(QCoreApplication.translate("MainWindow", u"Tree number", None))
-        self.label_7.setText(QCoreApplication.translate("MainWindow", u"Current level", None))
-        self.label_8.setText(QCoreApplication.translate("MainWindow", u"Last level wisdom given", None))
-        self.label_9.setText(QCoreApplication.translate("MainWindow", u"Last level magic given", None))
-        self.label_10.setText(QCoreApplication.translate("MainWindow", u"Attack", None))
-        self.label_11.setText(QCoreApplication.translate("MainWindow", u"Defence", None))
-        self.label_12.setText(QCoreApplication.translate("MainWindow", u"SP", None))
-        self.label_13.setText(QCoreApplication.translate("MainWindow", u"Knowledge", None))
         self.groupBox_3.setTitle(QCoreApplication.translate("MainWindow", u"Fastest ways to", None))
         self.cmb_skill_search_level.setItemText(0, QCoreApplication.translate("MainWindow", u"Basic", None))
         self.cmb_skill_search_level.setItemText(1, QCoreApplication.translate("MainWindow", u"Advanced", None))
         self.cmb_skill_search_level.setItemText(2, QCoreApplication.translate("MainWindow", u"Expert", None))
 
         self.btn_find_way.setText(QCoreApplication.translate("MainWindow", u"Find", None))
+        self.label_11.setText(QCoreApplication.translate("MainWindow", u"Unwanted skills:", None))
+        self.te_unwanted_skills.setHtml(QCoreApplication.translate("MainWindow", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"hr { height: 1px; border-width: 0; }\n"
+"li.unchecked::marker { content: \"\\2610\"; }\n"
+"li.checked::marker { content: \"\\2612\"; }\n"
+"</style></head><body style=\" font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">eagle eye</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">learning</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">first aid</p></body></html>", None))
+        self.label_10.setText(QCoreApplication.translate("MainWindow", u"PRI", None))
+        self.label_6.setText(QCoreApplication.translate("MainWindow", u"Tree number", None))
+        self.label_7.setText(QCoreApplication.translate("MainWindow", u"Current level", None))
+        self.label_8.setText(QCoreApplication.translate("MainWindow", u"Last level wisdom given", None))
+        self.label_9.setText(QCoreApplication.translate("MainWindow", u"Last level magic given", None))
         ___qtreewidgetitem = self.tw_skills.headerItem()
         ___qtreewidgetitem.setText(0, QCoreApplication.translate("MainWindow", u"Skill Tree", None));
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_2), QCoreApplication.translate("MainWindow", u"Tree browser", None))
@@ -691,19 +703,19 @@ class Ui_MainWindow(object):
 "li.unchecked::marker { content: \"\\2610\"; }\n"
 "li.checked::marker { content: \"\\2612\"; }\n"
 "</style></head><body style=\" font-family:'Segoe UI'; font-size:14pt; font-weight:700; font-style:normal;\">\n"
-"<p align=\"center\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:20pt;\">Hota tree calc 1.0</span></p>\n"
+"<p align=\"center\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:20pt;\">Hota tree calc 1.02</span></p>\n"
 "<p align=\"center\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Author: Temig (temig7487@gmail.com)</p>\n"
-"<p align=\"center\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:"
-                        "0px;\">Idea and design based on <a href=\"https://handbookhmm.ru/forum/viewtopic.php?f=8&amp;t=42\"><span style=\" text-decoration: underline; color:#0078d4;\">LMOracle.</span></a> Thanks to it's author - AlexSpl</p>\n"
+"<p align=\"center\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent"
+                        ":0px;\">Idea and design based on <a href=\"https://handbookhmm.ru/forum/viewtopic.php?f=8&amp;t=42\"><span style=\" text-decoration: underline; color:#0078d4;\">LMOracle.</span></a> Thanks to it's author - AlexSpl</p>\n"
 "<p align=\"center\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Some information about tree generation can be found <a href=\"http://heroescommunity.com/viewthread.php3?TID=17812&amp;pagenumber=12\"><span style=\" text-decoration: underline; color:#0078d4;\">here</span></a></p>\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" color:#ff0101;\">This program does NOT interact with Hota memory, it's just a help resource (like </span><a href=\"https://www.heroes3assist.com/\"><span style=\" text-decoration: underline; color:#0078d4;\">Heroes3 assist</span></a><span style=\" color:#ff0101;\">) that can calculate tree n"
-                        "umber from a given first level-ups and build a specific tree.</span></p>\n"
+"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" color:#ff0101;\">This program does NOT interact with Hota memory, it's just a help resource (like </span><a href=\"https://www.heroes3assist.com/\"><span style=\" text-decoration: underline; color:#0078d4;\">Heroes3 assist</span></a><span style=\" color:#ff0101;\">) that can calculate tree "
+                        "number from a given first level-ups and build a specific tree.</span></p>\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Another useful information resources:</p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><a href=\"https://vk.com/fizmig\"><span style=\" text-decoration: underline; color:#0078d4;\">Fizmig</span></a></p>\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">If you like this program, you can <a href=\"https://github.com/temig74/HotaTreeCalc/blob/master/R"
-                        "EADME.md\"><span style=\" text-decoration: underline; color:#0078d4;\">donate</span></a> author (view readme)</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">If you like this program, you can <a href=\"https://github.com/temig74/HotaTreeCalc/blob/master/"
+                        "README.md\"><span style=\" text-decoration: underline; color:#0078d4;\">donate</span></a> author (view readme)</p>\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Video instructions can be found <a href=\"https://www.youtube.com/@temig74\"><span style=\" text-decoration: underline; color:#0078d4;\">here</span></a></p></body></html>", None))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_3), QCoreApplication.translate("MainWindow", u"About", None))

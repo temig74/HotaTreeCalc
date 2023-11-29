@@ -234,12 +234,21 @@ class HeroState:
         return new_left_herostate, new_right_herostate, pri_skill
 
     #find fastest ways to aquire skills
-    def recursive_tree_search(self, max_level, target_skills, skillways:list):
+    def recursive_tree_search(self, max_level, target_skills, skillways: list, unwanted_skills: list):
+        for skill in target_skills:
+            if len(self.sec_skills) == 8 and skill not in self.sec_skills:
+                return
+
         flag = True
         for skill in target_skills:
             if self.sec_skills.get(skill, 0) < target_skills[skill]:
                 flag = False
                 break
+
+        for skill in unwanted_skills:
+            if skill in self.sec_skills:
+                return
+
         if flag:
             skillways.append(self.skillway)
             return
@@ -247,9 +256,9 @@ class HeroState:
         if self.cur_level <= max_level:
             next_left_state, next_right_state, pri = self.get_next_levelup()
             if next_left_state:
-                next_left_state.recursive_tree_search(max_level, target_skills, skillways)
+                next_left_state.recursive_tree_search(max_level, target_skills, skillways, unwanted_skills)
             if next_right_state:
-                next_right_state.recursive_tree_search(max_level, target_skills, skillways)
+                next_right_state.recursive_tree_search(max_level, target_skills, skillways, unwanted_skills)
 
 
 def find_tree_number(hero_class, hero_skills, hero_level, pri_skill, left_skill, right_skill, new_classes_sec, available_trees=None, last_wisdom=0, last_magic=0):

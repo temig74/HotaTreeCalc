@@ -1,12 +1,13 @@
 import sys
 from PySide6.QtWidgets import QApplication, QMainWindow, QTreeWidgetItem, QMenu, QFileDialog
-from PySide6.QtGui import QPainter, QTextDocument, QAction, QFont
+from PySide6.QtGui import QPainter, QTextDocument, QAction, QFont, QCursor
 from PySide6.QtCore import Qt
 from PySide6.QtPrintSupport import QPrinter
 
 from ui_main import Ui_MainWindow
 from h3_data import skill_list, hero_classes_pri, hero_classes_sec, start_pri, magic_list
 from herostate2 import HeroState, find_tree_number
+
 
 # pyside6-uic.exe .\tree_calc.ui -o ui_main.py # to import new ui
 
@@ -38,6 +39,16 @@ class TreeCalc(QMainWindow):
         # fill skills in comboboxes
         self.ui.cmb_start_1.addItem('')
         self.ui.cmb_start_2.addItem('')
+
+        self.cmb_skill_list = [[self.ui.cmb_skill1, self.ui.cmb_skill1_level],
+                               [self.ui.cmb_skill2, self.ui.cmb_skill2_level],
+                               [self.ui.cmb_skill3, self.ui.cmb_skill3_level],
+                               [self.ui.cmb_skill4, self.ui.cmb_skill4_level],
+                               [self.ui.cmb_skill5, self.ui.cmb_skill5_level],
+                               [self.ui.cmb_skill6, self.ui.cmb_skill6_level],
+                               [self.ui.cmb_skill7, self.ui.cmb_skill7_level],
+                               [self.ui.cmb_skill8, self.ui.cmb_skill8_level]]
+
         for elem in skill_list:
             self.ui.cmb_start_1.addItem(elem)
             self.ui.cmb_start_2.addItem(elem)
@@ -45,21 +56,21 @@ class TreeCalc(QMainWindow):
             self.ui.cmb_right2.addItem(elem)
             self.ui.cmb_left3.addItem(elem)
             self.ui.cmb_right3.addItem(elem)
-            self.ui.cmb_skill1.addItem(elem)
-            self.ui.cmb_skill2.addItem(elem)
-            self.ui.cmb_skill3.addItem(elem)
-            self.ui.cmb_skill4.addItem(elem)
-            self.ui.cmb_skill5.addItem(elem)
-            self.ui.cmb_skill6.addItem(elem)
-            self.ui.cmb_skill7.addItem(elem)
-            self.ui.cmb_skill8.addItem(elem)
+
+            for cmb in self.cmb_skill_list:
+                cmb[0].addItem(elem)
+
             self.ui.cmb_skill_search.addItem(elem)
 
         self.ui.cmb_skill_search.setCurrentText('earth magic')
         self.ui.btn_get_trees.clicked.connect(self.find_trees)
         self.ui.cb_levelup3.clicked.connect(self.enable_3_lev)
         # set skill for first level-up
-        self.ui.cmb_start_1.currentIndexChanged.connect(lambda: self.ui.cmb_left2.setCurrentIndex(self.ui.cmb_start_1.currentIndex()-1))
+        self.ui.cmb_start_1.currentIndexChanged.connect(self.set_start_skills)
+        self.ui.cmb_start_2.currentIndexChanged.connect(self.set_start_skills)
+        self.ui.cmb_start1_level.currentIndexChanged.connect(self.set_start_skills)
+        self.ui.cmb_start2_level.currentIndexChanged.connect(self.set_start_skills)
+
         self.ui.btn_build_tree.clicked.connect(self.build_tree_root)
         # set default primary skills for class when class chosen
         self.ui.cmb_hero_class.currentIndexChanged.connect(self.set_heroclass_features)
@@ -70,12 +81,45 @@ class TreeCalc(QMainWindow):
         self.ui.tw_skills.setContextMenuPolicy(Qt.CustomContextMenu)
         self.ui.tw_skills.customContextMenuRequested.connect(self.show_tw_menu)
 
+    def set_start_skills(self):
+        self.ui.cmb_left2.setCurrentText(self.ui.cmb_start_1.currentText())
+
+        self.ui.cmb_skill1.setCurrentText(self.ui.cmb_start_1.currentText())
+        self.ui.cmb_skill1_level.setCurrentIndex(self.ui.cmb_start1_level.currentIndex())
+        self.ui.cmb_skill2.setCurrentText(self.ui.cmb_start_2.currentText())
+        self.ui.cmb_skill2_level.setCurrentIndex(self.ui.cmb_start2_level.currentIndex())
+
     def show_tw_menu(self, pos):
+        item = self.ui.tw_skills.itemAt(pos)
+
         menu = QMenu()
         action_save_pdf = QAction('Save PDF', self)
         menu.addAction(action_save_pdf)
         action_save_pdf.triggered.connect(self.save_treeview_to_pdf)
+
+        action_rebuild_tree = QAction('Rebuild tree', self)
+        menu.addAction(action_rebuild_tree)
+        action_rebuild_tree.triggered.connect(lambda: self.rebuild_tree(item))
+
         menu.exec(self.ui.tw_skills.mapToGlobal(pos))
+
+    def rebuild_tree(self, clicked_item):
+        if clicked_item:
+            cur_herostate = clicked_item.herostate
+            for cmb in self.cmb_skill_list:
+                cmb[1].setCurrentIndex(0)
+            for i, skill in enumerate(cur_herostate.sec_skills):
+                self.cmb_skill_list[i][0].setCurrentText(skill)
+                self.cmb_skill_list[i][1].setCurrentIndex(cur_herostate.sec_skills[skill])
+            self.ui.sb_cur_level.setValue(cur_herostate.cur_level)
+            self.ui.sb_wisdom_counter.setValue(cur_herostate.wisdom_counter)
+            self.ui.sb_magic_counter.setValue(cur_herostate.magic_counter)
+            self.ui.sb_attack.setValue(cur_herostate.pri_skills[0])
+            self.ui.sb_defence.setValue(cur_herostate.pri_skills[1])
+            self.ui.sb_sp.setValue(cur_herostate.pri_skills[2])
+            self.ui.sb_knowledge.setValue(cur_herostate.pri_skills[3])
+            self.ui.tw_skills.clear()
+            self.build_tree_root()
 
     def save_treeview_to_pdf(self):
         file_path, _ = QFileDialog.getSaveFileName(self, "Save PDF", "", "PDF Files (*.pdf)")
@@ -143,6 +187,7 @@ class TreeCalc(QMainWindow):
             self.ui.cmb_left3.setEnabled(False)
             self.ui.cmb_right3.setEnabled(False)
             self.ui.cmb_choice3.setEnabled(False)
+
     # function that runs on expanding, that adds childs of childs of expanded item
 
     def find_trees(self):
@@ -158,7 +203,7 @@ class TreeCalc(QMainWindow):
 
         new_skills_table = hero_classes_sec[hero_class].copy()
         for banned_skill in self.ui.te_banned_skills.toPlainText().split('\n'):
-            new_skills_table[banned_skill] = 0
+            new_skills_table[banned_skill.lower()] = 0
 
         corr_trees = find_tree_number(hero_class, hero_skills, 1, self.ui.cmb_pri_2.currentText(), self.ui.cmb_left2.currentText(), self.ui.cmb_right2.currentText(), new_skills_table)
 
@@ -193,28 +238,17 @@ class TreeCalc(QMainWindow):
 
     def build_tree_root(self):
         self.ui.tw_skills.clear()
+        self.ui.te_skill_ways.clear()
         root_pri_skills = [self.ui.sb_attack.value(), self.ui.sb_defence.value(), self.ui.sb_sp.value(), self.ui.sb_knowledge.value()]
         root_sec_skills = {}
-        if self.ui.cmb_skill1_level.currentIndex() > 0:
-            root_sec_skills[self.ui.cmb_skill1.currentText()] = self.ui.cmb_skill1_level.currentIndex()
-        if self.ui.cmb_skill2_level.currentIndex() > 0:
-            root_sec_skills[self.ui.cmb_skill2.currentText()] = self.ui.cmb_skill2_level.currentIndex()
-        if self.ui.cmb_skill3_level.currentIndex() > 0:
-            root_sec_skills[self.ui.cmb_skill3.currentText()] = self.ui.cmb_skill3_level.currentIndex()
-        if self.ui.cmb_skill4_level.currentIndex() > 0:
-            root_sec_skills[self.ui.cmb_skill4.currentText()] = self.ui.cmb_skill4_level.currentIndex()
-        if self.ui.cmb_skill5_level.currentIndex() > 0:
-            root_sec_skills[self.ui.cmb_skill5.currentText()] = self.ui.cmb_skill5_level.currentIndex()
-        if self.ui.cmb_skill6_level.currentIndex() > 0:
-            root_sec_skills[self.ui.cmb_skill6.currentText()] = self.ui.cmb_skill6_level.currentIndex()
-        if self.ui.cmb_skill7_level.currentIndex() > 0:
-            root_sec_skills[self.ui.cmb_skill7.currentText()] = self.ui.cmb_skill7_level.currentIndex()
-        if self.ui.cmb_skill8_level.currentIndex() > 0:
-            root_sec_skills[self.ui.cmb_skill8.currentText()] = self.ui.cmb_skill8_level.currentIndex()
+
+        for cmb in self.cmb_skill_list:
+            if cmb[1].currentIndex() > 0:
+                root_sec_skills[cmb[0].currentText()] = cmb[1].currentIndex()
 
         new_skills_table = hero_classes_sec[self.ui.cmb_hero_class.currentText()].copy()
         for banned_skill in self.ui.te_banned_skills.toPlainText().split('\n'):
-            new_skills_table[banned_skill] = 0
+            new_skills_table[banned_skill.lower()] = 0
 
         root_item = SkillItem(HeroState(root_sec_skills, self.ui.sb_cur_level.value(), self.ui.sb_tree_num.value(), self.ui.cmb_hero_class.currentText(), new_skills_table, 'Start', root_pri_skills, self.ui.sb_wisdom_counter.value(), self.ui.sb_magic_counter.value()))
         root_item.setText(0, f'lvl{self.ui.sb_cur_level.value()} {self.ui.cmb_hero_class.currentText()} {root_pri_skills}')
@@ -242,15 +276,26 @@ class TreeCalc(QMainWindow):
                 item.child(1).addChild(SkillItem(right_state2))
 
     def find_way(self):
+        self.ui.te_skill_ways.clear()
         if self.ui.tw_skills.topLevelItem(0):
             hero = self.ui.tw_skills.topLevelItem(0).herostate
             skillway_list = []
+            unwanted_skills = set()
+
+            for unwanted_skill in self.ui.te_unwanted_skills.toPlainText().split('\n'):
+                unwanted_skills.add(unwanted_skill.lower())
+
             for max_level in range(hero.cur_level, 23):
-                hero.recursive_tree_search(max_level, {self.ui.cmb_skill_search.currentText(): self.ui.cmb_skill_search_level.currentIndex()+1}, skillway_list)
+                hero.recursive_tree_search(max_level, {self.ui.cmb_skill_search.currentText(): self.ui.cmb_skill_search_level.currentIndex() + 1}, skillway_list, unwanted_skills)
                 if skillway_list:
                     break
-            self.ui.te_skill_ways.clear()
-            self.ui.te_skill_ways.setText('\n'.join(skillway_list))
+
+            if skillway_list:
+                self.ui.te_skill_ways.setText('\n'.join(skillway_list))
+            else:
+                self.ui.te_skill_ways.setText('Trees not found')
+        else:
+            self.ui.te_skill_ways.setText('Tree is not built')
 
 
 if __name__ == "__main__":
