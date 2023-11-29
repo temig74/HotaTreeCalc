@@ -581,7 +581,7 @@ class Ui_MainWindow(object):
     # setupUi
 
     def retranslateUi(self, MainWindow):
-        MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"Hota tree calc 1.02", None))
+        MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"Hota tree calc 1.02a", None))
         self.actionhelp.setText(QCoreApplication.translate("MainWindow", u"help", None))
         self.actionabout.setText(QCoreApplication.translate("MainWindow", u"about", None))
         self.label.setText(QCoreApplication.translate("MainWindow", u"Hero class", None))
