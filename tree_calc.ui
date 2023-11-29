@@ -30,7 +30,7 @@
    </size>
   </property>
   <property name="windowTitle">
-   <string>Hota tree calc 1.02a</string>
+   <string>Hota tree calc 1.02b</string>
   </property>
   <property name="iconSize">
    <size>
@@ -1221,7 +1221,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
           <x>10</x>
           <y>10</y>
           <width>721</width>
-          <height>431</height>
+          <height>481</height>
          </rect>
         </property>
         <property name="font">
@@ -1238,7 +1238,7 @@ hr { height: 1px; border-width: 0; }
 li.unchecked::marker { content: &quot;\2610&quot;; }
 li.checked::marker { content: &quot;\2612&quot;; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI'; font-size:14pt; font-weight:700; font-style:normal;&quot;&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:20pt;&quot;&gt;Hota tree calc 1.02&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:20pt;&quot;&gt;Hota tree calc 1.02b&lt;/span&gt;&lt;/p&gt;
 &lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Author: Temig (temig7487@gmail.com)&lt;/p&gt;
 &lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Idea and design based on &lt;a href=&quot;https://handbookhmm.ru/forum/viewtopic.php?f=8&amp;amp;t=42&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0078d4;&quot;&gt;LMOracle.&lt;/span&gt;&lt;/a&gt; Thanks to it's author - AlexSpl&lt;/p&gt;
 &lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Some information about tree generation can be found &lt;a href=&quot;http://heroescommunity.com/viewthread.php3?TID=17812&amp;amp;pagenumber=12&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0078d4;&quot;&gt;here&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
@@ -1249,7 +1249,9 @@ li.checked::marker { content: &quot;\2612&quot;; }
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;If you like this program, you can &lt;a href=&quot;https://github.com/temig74/HotaTreeCalc/blob/master/README.md&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0078d4;&quot;&gt;donate&lt;/span&gt;&lt;/a&gt; author (view readme)&lt;/p&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Video instructions can be found &lt;a href=&quot;https://www.youtube.com/@temig74&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0078d4;&quot;&gt;here&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Video instructions can be found &lt;a href=&quot;https://www.youtube.com/@temig74&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0078d4;&quot;&gt;here&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; text-decoration: underline; color:#0078d4;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Check for new versions &lt;a href=&quot;https://github.com/temig74/HotaTreeCalc/releases&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0078d4;&quot;&gt;here on github&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
         </property>
         <property name="wordWrap">
          <bool>true</bool>

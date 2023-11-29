@@ -212,11 +212,12 @@ class TreeCalc(QMainWindow):
         else:
             hero_skills[self.ui.cmb_right2.currentText()] = hero_skills.get(self.ui.cmb_right2.currentText(), 0) + 1
 
+        if self.ui.cmb_left2.currentText() == 'wisdom' or self.ui.cmb_right2.currentText() == 'wisdom':
+            wisdom_counter = 2
+        if (self.ui.cmb_left2.currentText() in magic_list) or (self.ui.cmb_right2.currentText() in magic_list):
+            magic_counter = 2
+
         if self.ui.cb_levelup3.isChecked():
-            if self.ui.cmb_left2.currentText() == 'wisdom' or self.ui.cmb_right2.currentText() == 'wisdom':
-                wisdom_counter = 2
-            if (self.ui.cmb_left2.currentText() in magic_list) or (self.ui.cmb_right2.currentText() in magic_list):
-                magic_counter = 2
             corr_trees = find_tree_number(hero_class, hero_skills, 2, self.ui.cmb_pri_3.currentText(), self.ui.cmb_left3.currentText(), self.ui.cmb_right3.currentText(), new_skills_table, corr_trees, wisdom_counter, magic_counter)
 
             if self.ui.cmb_choice3.currentText() == 'left':
@@ -229,7 +230,6 @@ class TreeCalc(QMainWindow):
             if (self.ui.cmb_left3.currentText() in magic_list) or (self.ui.cmb_right3.currentText() in magic_list):
                 magic_counter = 3
 
-        print(hero_skills)
         tree_text = []
         for tree_num in corr_trees:
             hero = HeroState(hero_skills,

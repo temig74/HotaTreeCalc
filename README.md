@@ -1,5 +1,5 @@
 # HotaTreeCalc
-Hota tree calc 1.02a
+Hota tree calc 1.02b
 - Changes:
 - added "rebuild tree" in right click menu
 - start skills setup in "get tree" tab changes them in tree viewer
