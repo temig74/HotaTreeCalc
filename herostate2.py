@@ -1,7 +1,7 @@
 from h3_data import skill_list, hero_classes_pri, magic_list
 
 # File contains herostate class and tree search function
-# Author: temig74 (https://github.com/temig74/)
+# Author: Temig (https://github.com/temig74/)
 # Thanks to AlexSpl
 
 def rand(rold):

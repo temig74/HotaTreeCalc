@@ -1,6 +1,11 @@
 # HotaTreeCalc
-Hota tree calc 1.02b
-- Changes:
+Hota tree calc 1.03 changes:
+- now you can input multiple target skills in searching fastest ways to skills
+- appearance change: added icons to skills, changed background
+- all skills are sorted by alphabet
+- fixed attack-defence and sp-knowledge swapped spinboxes in treebuilder
+
+Hota tree calc 1.02b changes:
 - added "rebuild tree" in right click menu
 - start skills setup in "get tree" tab changes them in tree viewer
 - added unwanted skills field in finding ways to target skill

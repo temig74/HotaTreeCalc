@@ -1,7 +1,7 @@
 import sys
-from PySide6.QtWidgets import QApplication, QMainWindow, QTreeWidgetItem, QMenu, QFileDialog
-from PySide6.QtGui import QPainter, QTextDocument, QAction, QFont, QCursor
-from PySide6.QtCore import Qt
+from PySide6.QtWidgets import QApplication, QMainWindow, QTreeWidgetItem, QMenu, QFileDialog, QMessageBox
+from PySide6.QtGui import QPainter, QTextDocument, QAction, QFont, QIcon
+from PySide6.QtCore import Qt, QSize
 from PySide6.QtPrintSupport import QPrinter
 
 from ui_main import Ui_MainWindow
@@ -13,6 +13,7 @@ from herostate2 import HeroState, find_tree_number
 
 ##################################################################
 # Hota Tree Calc
+# Author: Temig (https://github.com/temig74/)
 # Idea and design based on LMOracle by AlexSpl: https://handbookhmm.ru/forum/viewtopic.php?f=8&t=42
 ##################################################################
 
@@ -25,12 +26,60 @@ class SkillItem(QTreeWidgetItem):
         # set text of item on creating, it includes chosen skill, it's level and primary skills
         self.setText(0, f'lvl {herostate.cur_level} {herostate.chosen_skill} {herostate.sec_skills.get(herostate.chosen_skill, 0)} {herostate.pri_skills}')
 
+        # if herostate.chosen_skill in skill_list:
+        #    self.setIcon(0, QIcon(f'img/{herostate.chosen_skill}.png'))
+
 
 class TreeCalc(QMainWindow):
     def __init__(self):
         super(TreeCalc, self).__init__()
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
+
+        self.setStyleSheet('background-image: url(img/back1.bmp);color: rgb(240, 220, 121);')
+        self.ui.cmb_hero_class.setStyleSheet('background-color: rgb(106, 70, 40);')
+        self.ui.cmb_start_1.setStyleSheet('background-color: rgb(106, 70, 40);')
+        self.ui.cmb_start1_level.setStyleSheet('background-color: rgb(106, 70, 40);')
+        self.ui.cmb_start_2.setStyleSheet('background-color: rgb(106, 70, 40);')
+        self.ui.cmb_start2_level.setStyleSheet('background-color: rgb(106, 70, 40);')
+        self.ui.cmb_pri_2.setStyleSheet('background-color: rgb(106, 70, 40);')
+        self.ui.cmb_left2.setStyleSheet('background-color: rgb(106, 70, 40);')
+        self.ui.cmb_right2.setStyleSheet('background-color: rgb(106, 70, 40);')
+        self.ui.cmb_choice2.setStyleSheet('background-color: rgb(106, 70, 40);')
+        self.ui.cmb_pri_3.setStyleSheet('background-color: rgb(106, 70, 40);')
+        self.ui.cmb_left3.setStyleSheet('background-color: rgb(106, 70, 40);')
+        self.ui.cmb_right3.setStyleSheet('background-color: rgb(106, 70, 40);')
+        self.ui.cmb_choice3.setStyleSheet('background-color: rgb(106, 70, 40);')
+        self.ui.cmb_skill1.setStyleSheet('background-color: rgb(106, 70, 40);')
+        self.ui.cmb_skill1_level.setStyleSheet('background-color: rgb(106, 70, 40);')
+        self.ui.cmb_skill2.setStyleSheet('background-color: rgb(106, 70, 40);')
+        self.ui.cmb_skill2_level.setStyleSheet('background-color: rgb(106, 70, 40);')
+        self.ui.cmb_skill3.setStyleSheet('background-color: rgb(106, 70, 40);')
+        self.ui.cmb_skill3_level.setStyleSheet('background-color: rgb(106, 70, 40);')
+        self.ui.cmb_skill4.setStyleSheet('background-color: rgb(106, 70, 40);')
+        self.ui.cmb_skill4_level.setStyleSheet('background-color: rgb(106, 70, 40);')
+        self.ui.cmb_skill5.setStyleSheet('background-color: rgb(106, 70, 40);')
+        self.ui.cmb_skill5_level.setStyleSheet('background-color: rgb(106, 70, 40);')
+        self.ui.cmb_skill6.setStyleSheet('background-color: rgb(106, 70, 40);')
+        self.ui.cmb_skill6_level.setStyleSheet('background-color: rgb(106, 70, 40);')
+        self.ui.cmb_skill7.setStyleSheet('background-color: rgb(106, 70, 40);')
+        self.ui.cmb_skill7_level.setStyleSheet('background-color: rgb(106, 70, 40);')
+        self.ui.cmb_skill8.setStyleSheet('background-color: rgb(106, 70, 40);')
+        self.ui.cmb_skill8_level.setStyleSheet('background-color: rgb(106, 70, 40);')
+        self.ui.sb_tree_num.setStyleSheet('background-color: rgb(106, 70, 40);')
+        self.ui.sb_cur_level.setStyleSheet('background-color: rgb(106, 70, 40);')
+        self.ui.sb_wisdom_counter.setStyleSheet('background-color: rgb(106, 70, 40);')
+        self.ui.sb_magic_counter.setStyleSheet('background-color: rgb(106, 70, 40);')
+        self.ui.sb_attack.setStyleSheet('background-color: rgb(106, 70, 40);')
+        self.ui.sb_defence.setStyleSheet('background-color: rgb(106, 70, 40);')
+        self.ui.sb_sp.setStyleSheet('background-color: rgb(106, 70, 40);')
+        self.ui.sb_knowledge.setStyleSheet('background-color: rgb(106, 70, 40);')
+        self.ui.tabWidget.setStyleSheet('QTabWidget::pane {background-image: url(img/back1.bmp); color: rgb(240, 220, 121)} QTabBar::tab {background-image: url(img/back1.bmp);	color: rgb(240, 220, 121); border: 1px solid #F0DC79; padding: 5px;} QTabBar::tab:selected, QTabBar::tab:hover {background-image: url(img/back1.bmp); color: rgb(240, 220, 121)}')
+        self.ui.tw_skills.setStyleSheet("""
+            QHeaderView::section { background-color: rgb(106, 70, 40); color: rgb(240, 220, 121); }
+            QScrollBar:vertical { background: rgb(106, 70, 40); }
+            QScrollBar:horizontal { background: rgb(106, 70, 40); }
+        """)
 
         # fill hero classes
         for elem in hero_classes_pri:
@@ -49,20 +98,21 @@ class TreeCalc(QMainWindow):
                                [self.ui.cmb_skill7, self.ui.cmb_skill7_level],
                                [self.ui.cmb_skill8, self.ui.cmb_skill8_level]]
 
-        for elem in skill_list:
-            self.ui.cmb_start_1.addItem(elem)
-            self.ui.cmb_start_2.addItem(elem)
-            self.ui.cmb_left2.addItem(elem)
-            self.ui.cmb_right2.addItem(elem)
-            self.ui.cmb_left3.addItem(elem)
-            self.ui.cmb_right3.addItem(elem)
+        sorted_skill_list = ['']
+        sorted_skill_list.extend(sorted(skill_list))
+
+        for elem in sorted_skill_list:
+            icon = QIcon(f'img/{elem}.png')
+            self.ui.cmb_start_1.addItem(icon, elem)
+            self.ui.cmb_start_2.addItem(icon, elem)
+            self.ui.cmb_left2.addItem(icon, elem)
+            self.ui.cmb_right2.addItem(icon, elem)
+            self.ui.cmb_left3.addItem(icon, elem)
+            self.ui.cmb_right3.addItem(icon, elem)
 
             for cmb in self.cmb_skill_list:
-                cmb[0].addItem(elem)
+                cmb[0].addItem(icon, elem)
 
-            self.ui.cmb_skill_search.addItem(elem)
-
-        self.ui.cmb_skill_search.setCurrentText('earth magic')
         self.ui.btn_get_trees.clicked.connect(self.find_trees)
         self.ui.cb_levelup3.clicked.connect(self.enable_3_lev)
         # set skill for first level-up
@@ -80,6 +130,8 @@ class TreeCalc(QMainWindow):
 
         self.ui.tw_skills.setContextMenuPolicy(Qt.CustomContextMenu)
         self.ui.tw_skills.customContextMenuRequested.connect(self.show_tw_menu)
+
+        self.ui.tw_skills.setIconSize(QSize(33, 33))
 
     def set_start_skills(self):
         self.ui.cmb_left2.setCurrentText(self.ui.cmb_start_1.currentText())
@@ -146,7 +198,6 @@ class TreeCalc(QMainWindow):
             if item.child(1) and item.isExpanded():
                 text += '\n' + '       ' * (item.child(1).herostate.cur_level - top.herostate.cur_level) + recursive_get_text(item.child(1))
             return text
-
         return recursive_get_text(top)
 
     # function that sets primary skills of chosen class
@@ -202,8 +253,14 @@ class TreeCalc(QMainWindow):
             hero_skills[self.ui.cmb_start_2.currentText()] = self.ui.cmb_start2_level.currentIndex()
 
         new_skills_table = hero_classes_sec[hero_class].copy()
-        for banned_skill in self.ui.te_banned_skills.toPlainText().split('\n'):
-            new_skills_table[banned_skill.lower()] = 0
+        for banned_skill in self.ui.te_banned_skills.toPlainText().lower().split('\n'):
+            if banned_skill not in skill_list:
+                msg = QMessageBox()
+                msg.setWindowTitle('Error!')
+                msg.setText('Error in banned skills')
+                msg.exec()
+                return
+            new_skills_table[banned_skill] = 0
 
         corr_trees = find_tree_number(hero_class, hero_skills, 1, self.ui.cmb_pri_2.currentText(), self.ui.cmb_left2.currentText(), self.ui.cmb_right2.currentText(), new_skills_table)
 
@@ -257,8 +314,14 @@ class TreeCalc(QMainWindow):
                 root_sec_skills[cmb[0].currentText()] = cmb[1].currentIndex()
 
         new_skills_table = hero_classes_sec[self.ui.cmb_hero_class.currentText()].copy()
-        for banned_skill in self.ui.te_banned_skills.toPlainText().split('\n'):
-            new_skills_table[banned_skill.lower()] = 0
+        for banned_skill in self.ui.te_banned_skills.toPlainText().lower().split('\n'):
+            if banned_skill not in skill_list:
+                msg = QMessageBox()
+                msg.setWindowTitle('Error!')
+                msg.setText('Error in banned skills')
+                msg.exec()
+                return
+            new_skills_table[banned_skill] = 0
 
         root_item = SkillItem(HeroState(root_sec_skills, self.ui.sb_cur_level.value(), self.ui.sb_tree_num.value(), self.ui.cmb_hero_class.currentText(), new_skills_table, 'Start', root_pri_skills, self.ui.sb_wisdom_counter.value(), self.ui.sb_magic_counter.value()))
         root_item.setText(0, f'lvl{self.ui.sb_cur_level.value()} {self.ui.cmb_hero_class.currentText()} {root_pri_skills}')
@@ -291,12 +354,27 @@ class TreeCalc(QMainWindow):
             hero = self.ui.tw_skills.topLevelItem(0).herostate
             skillway_list = []
             unwanted_skills = set()
+            wanted_skills = {}
 
-            for unwanted_skill in self.ui.te_unwanted_skills.toPlainText().split('\n'):
+            for wanted_skill in self.ui.te_wanted_skills.toPlainText().lower().split('\n'):
+                if wanted_skill[-1].isdigit():
+                    wanted_skills[wanted_skill[:-1]] = int(wanted_skill[-1])
+                else:
+                    wanted_skills[wanted_skill] = 1
+
+            if not all(skill in skill_list for skill in wanted_skills):
+                self.ui.te_skill_ways.setText('Error: wrong skill in wanted skills')
+                return
+
+            for unwanted_skill in self.ui.te_unwanted_skills.toPlainText().lower().split('\n'):
                 unwanted_skills.add(unwanted_skill.lower())
 
+            if not all(skill in skill_list for skill in unwanted_skills):
+                self.ui.te_skill_ways.setText('Error: wrong skill in unwanted skills')
+                return
+
             for max_level in range(hero.cur_level, 23):
-                hero.recursive_tree_search(max_level, {self.ui.cmb_skill_search.currentText(): self.ui.cmb_skill_search_level.currentIndex() + 1}, skillway_list, unwanted_skills)
+                hero.recursive_tree_search(max_level, wanted_skills, skillway_list, unwanted_skills)
                 if skillway_list:
                     break
 
