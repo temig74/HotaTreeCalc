@@ -175,7 +175,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
        <string notr="true"/>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>1</number>
       </property>
       <property name="tabsClosable">
        <bool>false</bool>

@@ -254,13 +254,14 @@ class TreeCalc(QMainWindow):
 
         new_skills_table = hero_classes_sec[hero_class].copy()
         for banned_skill in self.ui.te_banned_skills.toPlainText().lower().split('\n'):
-            if banned_skill not in skill_list:
-                msg = QMessageBox()
-                msg.setWindowTitle('Error!')
-                msg.setText('Error in banned skills')
-                msg.exec()
-                return
-            new_skills_table[banned_skill] = 0
+            if banned_skill:
+                if banned_skill not in skill_list:
+                    msg = QMessageBox()
+                    msg.setWindowTitle('Error!')
+                    msg.setText('Error in banned skills')
+                    msg.exec()
+                    return
+                new_skills_table[banned_skill] = 0
 
         corr_trees = find_tree_number(hero_class, hero_skills, 1, self.ui.cmb_pri_2.currentText(), self.ui.cmb_left2.currentText(), self.ui.cmb_right2.currentText(), new_skills_table)
 
@@ -315,13 +316,14 @@ class TreeCalc(QMainWindow):
 
         new_skills_table = hero_classes_sec[self.ui.cmb_hero_class.currentText()].copy()
         for banned_skill in self.ui.te_banned_skills.toPlainText().lower().split('\n'):
-            if banned_skill not in skill_list:
-                msg = QMessageBox()
-                msg.setWindowTitle('Error!')
-                msg.setText('Error in banned skills')
-                msg.exec()
-                return
-            new_skills_table[banned_skill] = 0
+            if banned_skill:
+                if banned_skill not in skill_list:
+                    msg = QMessageBox()
+                    msg.setWindowTitle('Error!')
+                    msg.setText('Error in banned skills')
+                    msg.exec()
+                    return
+                new_skills_table[banned_skill] = 0
 
         root_item = SkillItem(HeroState(root_sec_skills, self.ui.sb_cur_level.value(), self.ui.sb_tree_num.value(), self.ui.cmb_hero_class.currentText(), new_skills_table, 'Start', root_pri_skills, self.ui.sb_wisdom_counter.value(), self.ui.sb_magic_counter.value()))
         root_item.setText(0, f'lvl{self.ui.sb_cur_level.value()} {self.ui.cmb_hero_class.currentText()} {root_pri_skills}')
@@ -367,7 +369,8 @@ class TreeCalc(QMainWindow):
                 return
 
             for unwanted_skill in self.ui.te_unwanted_skills.toPlainText().lower().split('\n'):
-                unwanted_skills.add(unwanted_skill.lower())
+                if unwanted_skill:
+                    unwanted_skills.add(unwanted_skill.lower())
 
             if not all(skill in skill_list for skill in unwanted_skills):
                 self.ui.te_skill_ways.setText('Error: wrong skill in unwanted skills')
