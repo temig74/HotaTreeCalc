@@ -26,13 +26,13 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(865, 849)
+        MainWindow.resize(865, 835)
         sizePolicy = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(MainWindow.sizePolicy().hasHeightForWidth())
         MainWindow.setSizePolicy(sizePolicy)
-        MainWindow.setMinimumSize(QSize(865, 800))
+        MainWindow.setMinimumSize(QSize(865, 835))
         MainWindow.setMaximumSize(QSize(16777215, 16777215))
         MainWindow.setIconSize(QSize(64, 64))
         self.centralwidget = QWidget(MainWindow)
