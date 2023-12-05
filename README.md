@@ -1,4 +1,11 @@
 # HotaTreeCalc
+Hota tree calc 1.04 changes:
+- now you can choose and add skills from comboboxes for banned, wanted, and unwanted skills
+- to delete a skill from banned, wanted and unwanted, use right-click menu
+- added button to export all 255 trees for a hero in PDF
+- now you can right-click on a found tree in tree numbers list and build this tree
+- minor appearance changes
+
 Hota tree calc 1.03 changes:
 - now you can input multiple target skills in searching fastest ways to skills
 - appearance change: added icons to skills, changed background

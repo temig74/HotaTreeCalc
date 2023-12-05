@@ -17,15 +17,16 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QPalette, QPixmap, QRadialGradient, QTransform)
 from PySide6.QtWidgets import (QApplication, QCheckBox, QComboBox, QGridLayout,
     QGroupBox, QHBoxLayout, QHeaderView, QLabel,
-    QLayout, QMainWindow, QPushButton, QSizePolicy,
-    QSpinBox, QTabWidget, QTextEdit, QTreeWidget,
-    QTreeWidgetItem, QVBoxLayout, QWidget)
+    QLayout, QListWidget, QListWidgetItem, QMainWindow,
+    QPushButton, QSizePolicy, QSpinBox, QTabWidget,
+    QTextEdit, QTreeWidget, QTreeWidgetItem, QVBoxLayout,
+    QWidget)
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(865, 800)
+        MainWindow.resize(865, 849)
         sizePolicy = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -54,24 +55,42 @@ class Ui_MainWindow(object):
 
         self.cmb_hero_class = QComboBox(self.centralwidget)
         self.cmb_hero_class.setObjectName(u"cmb_hero_class")
-        self.cmb_hero_class.setMinimumSize(QSize(90, 0))
+        self.cmb_hero_class.setMinimumSize(QSize(112, 0))
         self.cmb_hero_class.setMaximumSize(QSize(90, 16777215))
         self.cmb_hero_class.setStyleSheet(u"")
 
         self.verticalLayout.addWidget(self.cmb_hero_class)
 
+        self.btn_ban_skill = QPushButton(self.centralwidget)
+        self.btn_ban_skill.setObjectName(u"btn_ban_skill")
+        self.btn_ban_skill.setMinimumSize(QSize(112, 0))
+        self.btn_ban_skill.setMaximumSize(QSize(90, 16777215))
+
+        self.verticalLayout.addWidget(self.btn_ban_skill)
+
+        self.cmb_ban_skill = QComboBox(self.centralwidget)
+        self.cmb_ban_skill.setObjectName(u"cmb_ban_skill")
+        self.cmb_ban_skill.setMinimumSize(QSize(112, 25))
+        self.cmb_ban_skill.setMaximumSize(QSize(90, 16777215))
+        font = QFont()
+        font.setPointSize(8)
+        self.cmb_ban_skill.setFont(font)
+        self.cmb_ban_skill.setIconSize(QSize(25, 25))
+
+        self.verticalLayout.addWidget(self.cmb_ban_skill)
+
         self.label_4 = QLabel(self.centralwidget)
         self.label_4.setObjectName(u"label_4")
-        self.label_4.setMaximumSize(QSize(90, 16777215))
 
         self.verticalLayout.addWidget(self.label_4)
 
-        self.te_banned_skills = QTextEdit(self.centralwidget)
-        self.te_banned_skills.setObjectName(u"te_banned_skills")
-        self.te_banned_skills.setMinimumSize(QSize(90, 0))
-        self.te_banned_skills.setMaximumSize(QSize(90, 16777215))
+        self.lw_banned_skills = QListWidget(self.centralwidget)
+        self.lw_banned_skills.setObjectName(u"lw_banned_skills")
+        self.lw_banned_skills.setMinimumSize(QSize(112, 0))
+        self.lw_banned_skills.setMaximumSize(QSize(90, 16777215))
+        self.lw_banned_skills.setIconSize(QSize(25, 25))
 
-        self.verticalLayout.addWidget(self.te_banned_skills)
+        self.verticalLayout.addWidget(self.lw_banned_skills)
 
         self.label_14 = QLabel(self.centralwidget)
         self.label_14.setObjectName(u"label_14")
@@ -79,13 +98,12 @@ class Ui_MainWindow(object):
 
         self.verticalLayout.addWidget(self.label_14)
 
-        self.te_tree_numbers = QTextEdit(self.centralwidget)
-        self.te_tree_numbers.setObjectName(u"te_tree_numbers")
-        self.te_tree_numbers.setMinimumSize(QSize(90, 0))
-        self.te_tree_numbers.setMaximumSize(QSize(90, 16777215))
-        self.te_tree_numbers.setReadOnly(True)
+        self.lw_tree_numbers = QListWidget(self.centralwidget)
+        self.lw_tree_numbers.setObjectName(u"lw_tree_numbers")
+        self.lw_tree_numbers.setMinimumSize(QSize(112, 0))
+        self.lw_tree_numbers.setMaximumSize(QSize(90, 16777215))
 
-        self.verticalLayout.addWidget(self.te_tree_numbers)
+        self.verticalLayout.addWidget(self.lw_tree_numbers)
 
 
         self.horizontalLayout.addLayout(self.verticalLayout)
@@ -104,7 +122,7 @@ class Ui_MainWindow(object):
         self.tab.setObjectName(u"tab")
         self.layoutWidget = QWidget(self.tab)
         self.layoutWidget.setObjectName(u"layoutWidget")
-        self.layoutWidget.setGeometry(QRect(6, 6, 465, 149))
+        self.layoutWidget.setGeometry(QRect(6, 6, 495, 149))
         self.verticalLayout_2 = QVBoxLayout(self.layoutWidget)
         self.verticalLayout_2.setObjectName(u"verticalLayout_2")
         self.verticalLayout_2.setContentsMargins(0, 0, 0, 0)
@@ -117,9 +135,7 @@ class Ui_MainWindow(object):
 
         self.cmb_start_1 = QComboBox(self.layoutWidget)
         self.cmb_start_1.setObjectName(u"cmb_start_1")
-        self.cmb_start_1.setMinimumSize(QSize(100, 33))
-        font = QFont()
-        font.setPointSize(8)
+        self.cmb_start_1.setMinimumSize(QSize(120, 33))
         self.cmb_start_1.setFont(font)
         self.cmb_start_1.setStyleSheet(u"")
         self.cmb_start_1.setIconSize(QSize(33, 33))
@@ -143,7 +159,7 @@ class Ui_MainWindow(object):
 
         self.cmb_start_2 = QComboBox(self.layoutWidget)
         self.cmb_start_2.setObjectName(u"cmb_start_2")
-        self.cmb_start_2.setMinimumSize(QSize(100, 33))
+        self.cmb_start_2.setMinimumSize(QSize(120, 33))
         self.cmb_start_2.setFont(font)
         self.cmb_start_2.setStyleSheet(u"")
         self.cmb_start_2.setIconSize(QSize(33, 33))
@@ -183,7 +199,7 @@ class Ui_MainWindow(object):
 
         self.cmb_left2 = QComboBox(self.layoutWidget)
         self.cmb_left2.setObjectName(u"cmb_left2")
-        self.cmb_left2.setMinimumSize(QSize(115, 33))
+        self.cmb_left2.setMinimumSize(QSize(120, 33))
         self.cmb_left2.setMaximumSize(QSize(50, 16777215))
         self.cmb_left2.setFont(font)
         self.cmb_left2.setStyleSheet(u"")
@@ -193,7 +209,7 @@ class Ui_MainWindow(object):
 
         self.cmb_right2 = QComboBox(self.layoutWidget)
         self.cmb_right2.setObjectName(u"cmb_right2")
-        self.cmb_right2.setMinimumSize(QSize(115, 33))
+        self.cmb_right2.setMinimumSize(QSize(120, 33))
         self.cmb_right2.setFont(font)
         self.cmb_right2.setStyleSheet(u"")
         self.cmb_right2.setIconSize(QSize(33, 33))
@@ -235,7 +251,7 @@ class Ui_MainWindow(object):
         self.cmb_left3 = QComboBox(self.layoutWidget)
         self.cmb_left3.setObjectName(u"cmb_left3")
         self.cmb_left3.setEnabled(False)
-        self.cmb_left3.setMinimumSize(QSize(115, 33))
+        self.cmb_left3.setMinimumSize(QSize(120, 33))
         self.cmb_left3.setFont(font)
         self.cmb_left3.setStyleSheet(u"")
         self.cmb_left3.setIconSize(QSize(33, 33))
@@ -245,7 +261,7 @@ class Ui_MainWindow(object):
         self.cmb_right3 = QComboBox(self.layoutWidget)
         self.cmb_right3.setObjectName(u"cmb_right3")
         self.cmb_right3.setEnabled(False)
-        self.cmb_right3.setMinimumSize(QSize(115, 33))
+        self.cmb_right3.setMinimumSize(QSize(120, 33))
         self.cmb_right3.setFont(font)
         self.cmb_right3.setStyleSheet(u"")
         self.cmb_right3.setIconSize(QSize(33, 33))
@@ -280,13 +296,16 @@ class Ui_MainWindow(object):
         self.groupBox_2 = QGroupBox(self.tab_2)
         self.groupBox_2.setObjectName(u"groupBox_2")
         self.groupBox_2.setMinimumSize(QSize(205, 520))
+        self.groupBox_2.setMaximumSize(QSize(210, 16777215))
+        self.verticalLayout_5 = QVBoxLayout(self.groupBox_2)
+        self.verticalLayout_5.setSpacing(2)
+        self.verticalLayout_5.setObjectName(u"verticalLayout_5")
         self.groupBox = QGroupBox(self.groupBox_2)
         self.groupBox.setObjectName(u"groupBox")
-        self.groupBox.setGeometry(QRect(8, 0, 191, 301))
-        self.groupBox.setMinimumSize(QSize(0, 250))
+        self.groupBox.setMinimumSize(QSize(0, 300))
         self.cmb_skill1 = QComboBox(self.groupBox)
         self.cmb_skill1.setObjectName(u"cmb_skill1")
-        self.cmb_skill1.setGeometry(QRect(10, 26, 100, 33))
+        self.cmb_skill1.setGeometry(QRect(4, 26, 120, 33))
         self.cmb_skill1.setMinimumSize(QSize(100, 33))
         self.cmb_skill1.setFont(font)
         self.cmb_skill1.setStyleSheet(u"")
@@ -297,12 +316,12 @@ class Ui_MainWindow(object):
         self.cmb_skill1_level.addItem("")
         self.cmb_skill1_level.addItem("")
         self.cmb_skill1_level.setObjectName(u"cmb_skill1_level")
-        self.cmb_skill1_level.setGeometry(QRect(116, 26, 60, 22))
+        self.cmb_skill1_level.setGeometry(QRect(128, 26, 60, 22))
         self.cmb_skill1_level.setMaximumSize(QSize(60, 16777215))
         self.cmb_skill1_level.setStyleSheet(u"")
         self.cmb_skill2 = QComboBox(self.groupBox)
         self.cmb_skill2.setObjectName(u"cmb_skill2")
-        self.cmb_skill2.setGeometry(QRect(10, 59, 100, 33))
+        self.cmb_skill2.setGeometry(QRect(4, 59, 120, 33))
         self.cmb_skill2.setMinimumSize(QSize(100, 33))
         self.cmb_skill2.setFont(font)
         self.cmb_skill2.setStyleSheet(u"")
@@ -313,12 +332,12 @@ class Ui_MainWindow(object):
         self.cmb_skill2_level.addItem("")
         self.cmb_skill2_level.addItem("")
         self.cmb_skill2_level.setObjectName(u"cmb_skill2_level")
-        self.cmb_skill2_level.setGeometry(QRect(116, 59, 60, 22))
+        self.cmb_skill2_level.setGeometry(QRect(128, 59, 60, 22))
         self.cmb_skill2_level.setMaximumSize(QSize(60, 16777215))
         self.cmb_skill2_level.setStyleSheet(u"")
         self.cmb_skill3 = QComboBox(self.groupBox)
         self.cmb_skill3.setObjectName(u"cmb_skill3")
-        self.cmb_skill3.setGeometry(QRect(10, 93, 100, 33))
+        self.cmb_skill3.setGeometry(QRect(4, 93, 120, 33))
         self.cmb_skill3.setMinimumSize(QSize(100, 33))
         self.cmb_skill3.setFont(font)
         self.cmb_skill3.setStyleSheet(u"")
@@ -329,12 +348,12 @@ class Ui_MainWindow(object):
         self.cmb_skill3_level.addItem("")
         self.cmb_skill3_level.addItem("")
         self.cmb_skill3_level.setObjectName(u"cmb_skill3_level")
-        self.cmb_skill3_level.setGeometry(QRect(116, 93, 60, 22))
+        self.cmb_skill3_level.setGeometry(QRect(128, 93, 60, 22))
         self.cmb_skill3_level.setMaximumSize(QSize(60, 16777215))
         self.cmb_skill3_level.setStyleSheet(u"")
         self.cmb_skill4 = QComboBox(self.groupBox)
         self.cmb_skill4.setObjectName(u"cmb_skill4")
-        self.cmb_skill4.setGeometry(QRect(10, 126, 100, 33))
+        self.cmb_skill4.setGeometry(QRect(4, 126, 120, 33))
         self.cmb_skill4.setMinimumSize(QSize(100, 33))
         self.cmb_skill4.setFont(font)
         self.cmb_skill4.setStyleSheet(u"")
@@ -345,11 +364,11 @@ class Ui_MainWindow(object):
         self.cmb_skill4_level.addItem("")
         self.cmb_skill4_level.addItem("")
         self.cmb_skill4_level.setObjectName(u"cmb_skill4_level")
-        self.cmb_skill4_level.setGeometry(QRect(116, 126, 60, 22))
+        self.cmb_skill4_level.setGeometry(QRect(128, 126, 60, 22))
         self.cmb_skill4_level.setMaximumSize(QSize(60, 16777215))
         self.cmb_skill5 = QComboBox(self.groupBox)
         self.cmb_skill5.setObjectName(u"cmb_skill5")
-        self.cmb_skill5.setGeometry(QRect(10, 159, 100, 33))
+        self.cmb_skill5.setGeometry(QRect(4, 159, 120, 33))
         self.cmb_skill5.setMinimumSize(QSize(100, 33))
         self.cmb_skill5.setFont(font)
         self.cmb_skill5.setIconSize(QSize(33, 33))
@@ -359,11 +378,11 @@ class Ui_MainWindow(object):
         self.cmb_skill5_level.addItem("")
         self.cmb_skill5_level.addItem("")
         self.cmb_skill5_level.setObjectName(u"cmb_skill5_level")
-        self.cmb_skill5_level.setGeometry(QRect(116, 159, 60, 22))
+        self.cmb_skill5_level.setGeometry(QRect(128, 159, 60, 22))
         self.cmb_skill5_level.setMaximumSize(QSize(60, 16777215))
         self.cmb_skill6 = QComboBox(self.groupBox)
         self.cmb_skill6.setObjectName(u"cmb_skill6")
-        self.cmb_skill6.setGeometry(QRect(10, 193, 100, 33))
+        self.cmb_skill6.setGeometry(QRect(4, 193, 120, 33))
         self.cmb_skill6.setMinimumSize(QSize(100, 33))
         self.cmb_skill6.setFont(font)
         self.cmb_skill6.setIconSize(QSize(33, 33))
@@ -373,11 +392,11 @@ class Ui_MainWindow(object):
         self.cmb_skill6_level.addItem("")
         self.cmb_skill6_level.addItem("")
         self.cmb_skill6_level.setObjectName(u"cmb_skill6_level")
-        self.cmb_skill6_level.setGeometry(QRect(116, 193, 60, 22))
+        self.cmb_skill6_level.setGeometry(QRect(128, 193, 60, 22))
         self.cmb_skill6_level.setMaximumSize(QSize(60, 16777215))
         self.cmb_skill7 = QComboBox(self.groupBox)
         self.cmb_skill7.setObjectName(u"cmb_skill7")
-        self.cmb_skill7.setGeometry(QRect(10, 226, 100, 33))
+        self.cmb_skill7.setGeometry(QRect(4, 226, 120, 33))
         self.cmb_skill7.setMinimumSize(QSize(100, 33))
         self.cmb_skill7.setFont(font)
         self.cmb_skill7.setIconSize(QSize(33, 33))
@@ -387,11 +406,11 @@ class Ui_MainWindow(object):
         self.cmb_skill7_level.addItem("")
         self.cmb_skill7_level.addItem("")
         self.cmb_skill7_level.setObjectName(u"cmb_skill7_level")
-        self.cmb_skill7_level.setGeometry(QRect(116, 226, 60, 22))
+        self.cmb_skill7_level.setGeometry(QRect(128, 226, 60, 22))
         self.cmb_skill7_level.setMaximumSize(QSize(60, 16777215))
         self.cmb_skill8 = QComboBox(self.groupBox)
         self.cmb_skill8.setObjectName(u"cmb_skill8")
-        self.cmb_skill8.setGeometry(QRect(10, 259, 100, 33))
+        self.cmb_skill8.setGeometry(QRect(4, 259, 120, 33))
         self.cmb_skill8.setMinimumSize(QSize(100, 33))
         self.cmb_skill8.setFont(font)
         self.cmb_skill8.setIconSize(QSize(33, 33))
@@ -401,116 +420,32 @@ class Ui_MainWindow(object):
         self.cmb_skill8_level.addItem("")
         self.cmb_skill8_level.addItem("")
         self.cmb_skill8_level.setObjectName(u"cmb_skill8_level")
-        self.cmb_skill8_level.setGeometry(QRect(116, 259, 60, 22))
+        self.cmb_skill8_level.setGeometry(QRect(128, 259, 60, 22))
         self.cmb_skill8_level.setMaximumSize(QSize(60, 16777215))
-        self.btn_build_tree = QPushButton(self.groupBox_2)
-        self.btn_build_tree.setObjectName(u"btn_build_tree")
-        self.btn_build_tree.setGeometry(QRect(10, 416, 181, 21))
-        self.groupBox_3 = QGroupBox(self.groupBox_2)
-        self.groupBox_3.setObjectName(u"groupBox_3")
-        self.groupBox_3.setGeometry(QRect(10, 439, 171, 211))
-        self.groupBox_3.setMinimumSize(QSize(171, 171))
-        self.groupBox_3.setMaximumSize(QSize(161, 211))
-        self.verticalLayout_4 = QVBoxLayout(self.groupBox_3)
-        self.verticalLayout_4.setSpacing(2)
-        self.verticalLayout_4.setObjectName(u"verticalLayout_4")
-        self.te_wanted_skills = QTextEdit(self.groupBox_3)
-        self.te_wanted_skills.setObjectName(u"te_wanted_skills")
 
-        self.verticalLayout_4.addWidget(self.te_wanted_skills)
+        self.verticalLayout_5.addWidget(self.groupBox)
 
-        self.btn_find_way = QPushButton(self.groupBox_3)
-        self.btn_find_way.setObjectName(u"btn_find_way")
-
-        self.verticalLayout_4.addWidget(self.btn_find_way)
-
-        self.label_11 = QLabel(self.groupBox_3)
-        self.label_11.setObjectName(u"label_11")
-
-        self.verticalLayout_4.addWidget(self.label_11)
-
-        self.te_unwanted_skills = QTextEdit(self.groupBox_3)
-        self.te_unwanted_skills.setObjectName(u"te_unwanted_skills")
-
-        self.verticalLayout_4.addWidget(self.te_unwanted_skills)
-
-        self.layoutWidget1 = QWidget(self.groupBox_2)
-        self.layoutWidget1.setObjectName(u"layoutWidget1")
-        self.layoutWidget1.setGeometry(QRect(7, 389, 191, 24))
-        self.horizontalLayout_8 = QHBoxLayout(self.layoutWidget1)
-        self.horizontalLayout_8.setSpacing(1)
-        self.horizontalLayout_8.setObjectName(u"horizontalLayout_8")
-        self.horizontalLayout_8.setContentsMargins(0, 0, 0, 0)
-        self.label_10 = QLabel(self.layoutWidget1)
-        self.label_10.setObjectName(u"label_10")
-
-        self.horizontalLayout_8.addWidget(self.label_10)
-
-        self.sb_attack = QSpinBox(self.layoutWidget1)
-        self.sb_attack.setObjectName(u"sb_attack")
-        self.sb_attack.setMinimumSize(QSize(37, 0))
-        self.sb_attack.setValue(2)
-
-        self.horizontalLayout_8.addWidget(self.sb_attack)
-
-        self.sb_defence = QSpinBox(self.layoutWidget1)
-        self.sb_defence.setObjectName(u"sb_defence")
-        self.sb_defence.setMinimumSize(QSize(37, 0))
-        self.sb_defence.setValue(2)
-
-        self.horizontalLayout_8.addWidget(self.sb_defence)
-
-        self.sb_sp = QSpinBox(self.layoutWidget1)
-        self.sb_sp.setObjectName(u"sb_sp")
-        self.sb_sp.setMinimumSize(QSize(37, 0))
-        self.sb_sp.setMinimum(1)
-
-        self.horizontalLayout_8.addWidget(self.sb_sp)
-
-        self.sb_knowledge = QSpinBox(self.layoutWidget1)
-        self.sb_knowledge.setObjectName(u"sb_knowledge")
-        self.sb_knowledge.setMinimumSize(QSize(37, 0))
-        self.sb_knowledge.setMinimum(1)
-
-        self.horizontalLayout_8.addWidget(self.sb_knowledge)
-
-        self.widget = QWidget(self.groupBox_2)
-        self.widget.setObjectName(u"widget")
-        self.widget.setGeometry(QRect(8, 303, 190, 81))
-        self.gridLayout = QGridLayout(self.widget)
+        self.gridLayout = QGridLayout()
         self.gridLayout.setObjectName(u"gridLayout")
-        self.gridLayout.setContentsMargins(0, 0, 0, 0)
-        self.label_6 = QLabel(self.widget)
+        self.label_6 = QLabel(self.groupBox_2)
         self.label_6.setObjectName(u"label_6")
 
         self.gridLayout.addWidget(self.label_6, 0, 0, 1, 1)
 
-        self.sb_tree_num = QSpinBox(self.widget)
+        self.sb_tree_num = QSpinBox(self.groupBox_2)
         self.sb_tree_num.setObjectName(u"sb_tree_num")
         self.sb_tree_num.setMinimum(1)
         self.sb_tree_num.setMaximum(255)
 
         self.gridLayout.addWidget(self.sb_tree_num, 0, 1, 1, 1)
 
-        self.label_7 = QLabel(self.widget)
-        self.label_7.setObjectName(u"label_7")
-
-        self.gridLayout.addWidget(self.label_7, 0, 2, 1, 2)
-
-        self.sb_cur_level = QSpinBox(self.widget)
-        self.sb_cur_level.setObjectName(u"sb_cur_level")
-        self.sb_cur_level.setMinimum(1)
-        self.sb_cur_level.setMaximum(30)
-
-        self.gridLayout.addWidget(self.sb_cur_level, 0, 4, 1, 1)
-
-        self.label_8 = QLabel(self.widget)
+        self.label_8 = QLabel(self.groupBox_2)
         self.label_8.setObjectName(u"label_8")
         self.label_8.setWordWrap(True)
 
         self.gridLayout.addWidget(self.label_8, 1, 0, 1, 3)
 
-        self.sb_wisdom_counter = QSpinBox(self.widget)
+        self.sb_wisdom_counter = QSpinBox(self.groupBox_2)
         self.sb_wisdom_counter.setObjectName(u"sb_wisdom_counter")
         self.sb_wisdom_counter.setMinimum(0)
         self.sb_wisdom_counter.setMaximum(30)
@@ -518,19 +453,162 @@ class Ui_MainWindow(object):
 
         self.gridLayout.addWidget(self.sb_wisdom_counter, 1, 3, 1, 2)
 
-        self.label_9 = QLabel(self.widget)
+        self.label_9 = QLabel(self.groupBox_2)
         self.label_9.setObjectName(u"label_9")
         self.label_9.setWordWrap(True)
 
         self.gridLayout.addWidget(self.label_9, 2, 0, 1, 3)
 
-        self.sb_magic_counter = QSpinBox(self.widget)
+        self.sb_magic_counter = QSpinBox(self.groupBox_2)
         self.sb_magic_counter.setObjectName(u"sb_magic_counter")
         self.sb_magic_counter.setMinimum(0)
         self.sb_magic_counter.setMaximum(30)
         self.sb_magic_counter.setValue(0)
 
         self.gridLayout.addWidget(self.sb_magic_counter, 2, 3, 1, 2)
+
+        self.label_7 = QLabel(self.groupBox_2)
+        self.label_7.setObjectName(u"label_7")
+
+        self.gridLayout.addWidget(self.label_7, 0, 2, 1, 1)
+
+        self.sb_cur_level = QSpinBox(self.groupBox_2)
+        self.sb_cur_level.setObjectName(u"sb_cur_level")
+        self.sb_cur_level.setMinimum(1)
+        self.sb_cur_level.setMaximum(30)
+
+        self.gridLayout.addWidget(self.sb_cur_level, 0, 3, 1, 2)
+
+
+        self.verticalLayout_5.addLayout(self.gridLayout)
+
+        self.horizontalLayout_8 = QHBoxLayout()
+        self.horizontalLayout_8.setSpacing(1)
+        self.horizontalLayout_8.setObjectName(u"horizontalLayout_8")
+        self.label_10 = QLabel(self.groupBox_2)
+        self.label_10.setObjectName(u"label_10")
+
+        self.horizontalLayout_8.addWidget(self.label_10)
+
+        self.sb_attack = QSpinBox(self.groupBox_2)
+        self.sb_attack.setObjectName(u"sb_attack")
+        self.sb_attack.setMinimumSize(QSize(37, 0))
+        self.sb_attack.setValue(2)
+
+        self.horizontalLayout_8.addWidget(self.sb_attack)
+
+        self.sb_defence = QSpinBox(self.groupBox_2)
+        self.sb_defence.setObjectName(u"sb_defence")
+        self.sb_defence.setMinimumSize(QSize(37, 0))
+        self.sb_defence.setValue(2)
+
+        self.horizontalLayout_8.addWidget(self.sb_defence)
+
+        self.sb_sp = QSpinBox(self.groupBox_2)
+        self.sb_sp.setObjectName(u"sb_sp")
+        self.sb_sp.setMinimumSize(QSize(37, 0))
+        self.sb_sp.setMinimum(1)
+
+        self.horizontalLayout_8.addWidget(self.sb_sp)
+
+        self.sb_knowledge = QSpinBox(self.groupBox_2)
+        self.sb_knowledge.setObjectName(u"sb_knowledge")
+        self.sb_knowledge.setMinimumSize(QSize(37, 0))
+        self.sb_knowledge.setMinimum(1)
+
+        self.horizontalLayout_8.addWidget(self.sb_knowledge)
+
+
+        self.verticalLayout_5.addLayout(self.horizontalLayout_8)
+
+        self.horizontalLayout_6 = QHBoxLayout()
+        self.horizontalLayout_6.setObjectName(u"horizontalLayout_6")
+        self.btn_build_tree = QPushButton(self.groupBox_2)
+        self.btn_build_tree.setObjectName(u"btn_build_tree")
+
+        self.horizontalLayout_6.addWidget(self.btn_build_tree)
+
+        self.btn_export_all_trees = QPushButton(self.groupBox_2)
+        self.btn_export_all_trees.setObjectName(u"btn_export_all_trees")
+
+        self.horizontalLayout_6.addWidget(self.btn_export_all_trees)
+
+
+        self.verticalLayout_5.addLayout(self.horizontalLayout_6)
+
+        self.groupBox_3 = QGroupBox(self.groupBox_2)
+        self.groupBox_3.setObjectName(u"groupBox_3")
+        self.groupBox_3.setMinimumSize(QSize(190, 250))
+        self.groupBox_3.setMaximumSize(QSize(190, 1000))
+        self.verticalLayout_4 = QVBoxLayout(self.groupBox_3)
+        self.verticalLayout_4.setSpacing(2)
+        self.verticalLayout_4.setObjectName(u"verticalLayout_4")
+        self.btn_find_way = QPushButton(self.groupBox_3)
+        self.btn_find_way.setObjectName(u"btn_find_way")
+
+        self.verticalLayout_4.addWidget(self.btn_find_way)
+
+        self.horizontalLayout_9 = QHBoxLayout()
+        self.horizontalLayout_9.setObjectName(u"horizontalLayout_9")
+        self.bnt_add_wanted = QPushButton(self.groupBox_3)
+        self.bnt_add_wanted.setObjectName(u"bnt_add_wanted")
+
+        self.horizontalLayout_9.addWidget(self.bnt_add_wanted)
+
+        self.bnt_add_unwanted = QPushButton(self.groupBox_3)
+        self.bnt_add_unwanted.setObjectName(u"bnt_add_unwanted")
+
+        self.horizontalLayout_9.addWidget(self.bnt_add_unwanted)
+
+
+        self.verticalLayout_4.addLayout(self.horizontalLayout_9)
+
+        self.horizontalLayout_7 = QHBoxLayout()
+        self.horizontalLayout_7.setSpacing(2)
+        self.horizontalLayout_7.setObjectName(u"horizontalLayout_7")
+        self.cmb_wanted_unwanted = QComboBox(self.groupBox_3)
+        self.cmb_wanted_unwanted.setObjectName(u"cmb_wanted_unwanted")
+        self.cmb_wanted_unwanted.setMinimumSize(QSize(120, 0))
+        self.cmb_wanted_unwanted.setMaximumSize(QSize(120, 16777215))
+
+        self.horizontalLayout_7.addWidget(self.cmb_wanted_unwanted)
+
+        self.cmb_wanted_unwanted_level = QComboBox(self.groupBox_3)
+        self.cmb_wanted_unwanted_level.addItem("")
+        self.cmb_wanted_unwanted_level.addItem("")
+        self.cmb_wanted_unwanted_level.addItem("")
+        self.cmb_wanted_unwanted_level.setObjectName(u"cmb_wanted_unwanted_level")
+        self.cmb_wanted_unwanted_level.setMaximumSize(QSize(50, 16777215))
+
+        self.horizontalLayout_7.addWidget(self.cmb_wanted_unwanted_level)
+
+
+        self.verticalLayout_4.addLayout(self.horizontalLayout_7)
+
+        self.label_12 = QLabel(self.groupBox_3)
+        self.label_12.setObjectName(u"label_12")
+
+        self.verticalLayout_4.addWidget(self.label_12)
+
+        self.lw_wanted_skills = QListWidget(self.groupBox_3)
+        self.lw_wanted_skills.setObjectName(u"lw_wanted_skills")
+        self.lw_wanted_skills.setMinimumSize(QSize(0, 52))
+
+        self.verticalLayout_4.addWidget(self.lw_wanted_skills)
+
+        self.label_11 = QLabel(self.groupBox_3)
+        self.label_11.setObjectName(u"label_11")
+
+        self.verticalLayout_4.addWidget(self.label_11)
+
+        self.lw_unwanted_skills = QListWidget(self.groupBox_3)
+        self.lw_unwanted_skills.setObjectName(u"lw_unwanted_skills")
+        self.lw_unwanted_skills.setMinimumSize(QSize(0, 52))
+
+        self.verticalLayout_4.addWidget(self.lw_unwanted_skills)
+
+
+        self.verticalLayout_5.addWidget(self.groupBox_3)
 
 
         self.horizontalLayout_2.addWidget(self.groupBox_2)
@@ -562,7 +640,7 @@ class Ui_MainWindow(object):
         self.tab_3.setObjectName(u"tab_3")
         self.label_15 = QLabel(self.tab_3)
         self.label_15.setObjectName(u"label_15")
-        self.label_15.setGeometry(QRect(10, 10, 721, 481))
+        self.label_15.setGeometry(QRect(10, 10, 721, 611))
         font1 = QFont()
         font1.setPointSize(14)
         font1.setBold(True)
@@ -594,18 +672,10 @@ class Ui_MainWindow(object):
     # setupUi
 
     def retranslateUi(self, MainWindow):
-        MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"Hota tree calc 1.03", None))
+        MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"Hota tree calc 1.04", None))
         self.label.setText(QCoreApplication.translate("MainWindow", u"Hero class", None))
+        self.btn_ban_skill.setText(QCoreApplication.translate("MainWindow", u"Ban skill:", None))
         self.label_4.setText(QCoreApplication.translate("MainWindow", u"Banned skills:", None))
-        self.te_banned_skills.setHtml(QCoreApplication.translate("MainWindow", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"hr { height: 1px; border-width: 0; }\n"
-"li.unchecked::marker { content: \"\\2610\"; }\n"
-"li.checked::marker { content: \"\\2612\"; }\n"
-"</style></head><body style=\" font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">resistance</p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">navigation</p></body></html>", None))
         self.label_14.setText(QCoreApplication.translate("MainWindow", u"Tree numbers:", None))
         self.label_2.setText(QCoreApplication.translate("MainWindow", u"Start 1", None))
         self.cmb_start1_level.setItemText(0, QCoreApplication.translate("MainWindow", u"None", None))
@@ -681,34 +751,23 @@ class Ui_MainWindow(object):
         self.cmb_skill8_level.setItemText(2, QCoreApplication.translate("MainWindow", u"Advanced", None))
         self.cmb_skill8_level.setItemText(3, QCoreApplication.translate("MainWindow", u"Expert", None))
 
-        self.btn_build_tree.setText(QCoreApplication.translate("MainWindow", u"Build tree", None))
-        self.groupBox_3.setTitle(QCoreApplication.translate("MainWindow", u"Wanted skills:", None))
-        self.te_wanted_skills.setHtml(QCoreApplication.translate("MainWindow", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"hr { height: 1px; border-width: 0; }\n"
-"li.unchecked::marker { content: \"\\2610\"; }\n"
-"li.checked::marker { content: \"\\2612\"; }\n"
-"</style></head><body style=\" font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">earth magic1</p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">logistics1</p></body></html>", None))
-        self.btn_find_way.setText(QCoreApplication.translate("MainWindow", u"Find", None))
-        self.label_11.setText(QCoreApplication.translate("MainWindow", u"Unwanted skills:", None))
-        self.te_unwanted_skills.setHtml(QCoreApplication.translate("MainWindow", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"hr { height: 1px; border-width: 0; }\n"
-"li.unchecked::marker { content: \"\\2610\"; }\n"
-"li.checked::marker { content: \"\\2612\"; }\n"
-"</style></head><body style=\" font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">eagle eye</p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">learning</p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">first aid</p></body></html>", None))
-        self.label_10.setText(QCoreApplication.translate("MainWindow", u"PRI", None))
         self.label_6.setText(QCoreApplication.translate("MainWindow", u"Tree \u2116", None))
-        self.label_7.setText(QCoreApplication.translate("MainWindow", u"Cur. level", None))
         self.label_8.setText(QCoreApplication.translate("MainWindow", u"Last level wisdom given", None))
         self.label_9.setText(QCoreApplication.translate("MainWindow", u"Last level magic given", None))
+        self.label_7.setText(QCoreApplication.translate("MainWindow", u"Cur. level", None))
+        self.label_10.setText(QCoreApplication.translate("MainWindow", u"PRIM", None))
+        self.btn_build_tree.setText(QCoreApplication.translate("MainWindow", u"Build tree", None))
+        self.btn_export_all_trees.setText(QCoreApplication.translate("MainWindow", u"Export all trees", None))
+        self.groupBox_3.setTitle(QCoreApplication.translate("MainWindow", u"Way finder", None))
+        self.btn_find_way.setText(QCoreApplication.translate("MainWindow", u"Find", None))
+        self.bnt_add_wanted.setText(QCoreApplication.translate("MainWindow", u"Add wanted", None))
+        self.bnt_add_unwanted.setText(QCoreApplication.translate("MainWindow", u"Add unwanted", None))
+        self.cmb_wanted_unwanted_level.setItemText(0, QCoreApplication.translate("MainWindow", u"Basic", None))
+        self.cmb_wanted_unwanted_level.setItemText(1, QCoreApplication.translate("MainWindow", u"Advanced", None))
+        self.cmb_wanted_unwanted_level.setItemText(2, QCoreApplication.translate("MainWindow", u"Expert", None))
+
+        self.label_12.setText(QCoreApplication.translate("MainWindow", u"Wanted skills:", None))
+        self.label_11.setText(QCoreApplication.translate("MainWindow", u"Unwanted skills:", None))
         ___qtreewidgetitem = self.tw_skills.headerItem()
         ___qtreewidgetitem.setText(0, QCoreApplication.translate("MainWindow", u"Skill Tree", None));
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_2), QCoreApplication.translate("MainWindow", u"Tree browser", None))
@@ -719,7 +778,7 @@ class Ui_MainWindow(object):
 "li.unchecked::marker { content: \"\\2610\"; }\n"
 "li.checked::marker { content: \"\\2612\"; }\n"
 "</style></head><body style=\" font-family:'Segoe UI'; font-size:14pt; font-weight:700; font-style:normal;\">\n"
-"<p align=\"center\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:20pt;\">Hota tree calc 1.03</span></p>\n"
+"<p align=\"center\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:20pt;\">Hota tree calc 1.04</span></p>\n"
 "<p align=\"center\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Author: Temig (temig7487@gmail.com)</p>\n"
 "<p align=\"center\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent"
                         ":0px;\">Idea and design based on <a href=\"https://handbookhmm.ru/forum/viewtopic.php?f=8&amp;t=42\"><span style=\" text-decoration: underline; color:#0078d4;\">LMOracle.</span></a> Thanks to it's author - AlexSpl</p>\n"
@@ -736,7 +795,14 @@ class Ui_MainWindow(object):
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Video instructions can be found <a href=\"https://www.youtube.com/@temig74\"><span style=\" text-decoration: underline; color:#0078d4;\">here</span></a></p>\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; text-decoration: underline; color:#0078d4;\"><br /></p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Check for new versions <a href=\"https://github.com/temig74/HotaTreeCalc/releases\"><span style=\" text-decoration: underline; color:#0078"
-                        "d4;\">here on github</span></a></p></body></html>", None))
+                        "d4;\">here on github</span></a></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; text-decoration: underline; color:#0078d4;\"><br /></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt;\">I also inform, that 03.12.2023 </span><a href=\"https://h3hota.com/en/rules\"><span style=\" text-decoration: underline; color:#0078d4;\">rules</span></a><span style=\" font-size:10pt;\"> of rated games </span><a href=\"https://forum.heroesworld.ru/showthread.php?t=7340&amp;page=149\"><span style=\" text-decoration: underline; color:#0078d4;\">were updated</span></a><span style=\" font-size:10pt;\">:</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;\"><br /></p>\n"
+"<p style=\" margin-top:0px; mar"
+                        "gin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt;\">&quot;Browsing the map content or hero levelling tree with side programs (no matter if they read data from game memory, use side databases, generators or other methods) is the same level of a violation as map-hacking.&quot;</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;\"><br /></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt;\">You can use this program in non-rated games by mutual agreement of both players and for educational purposes.</span></p></body></html>", None))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_3), QCoreApplication.translate("MainWindow", u"About", None))
     # retranslateUi
 
