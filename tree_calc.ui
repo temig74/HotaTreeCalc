@@ -639,104 +639,47 @@
             </property>
             <layout class="QVBoxLayout" name="verticalLayout_5">
              <property name="spacing">
-              <number>2</number>
+              <number>3</number>
+             </property>
+             <property name="leftMargin">
+              <number>5</number>
+             </property>
+             <property name="topMargin">
+              <number>5</number>
+             </property>
+             <property name="bottomMargin">
+              <number>5</number>
              </property>
              <item>
               <widget class="QGroupBox" name="groupBox">
                <property name="minimumSize">
                 <size>
                  <width>0</width>
-                 <height>300</height>
+                 <height>285</height>
                 </size>
                </property>
                <property name="title">
                 <string>Current skills:</string>
                </property>
-               <widget class="QComboBox" name="cmb_skill1">
+               <widget class="QComboBox" name="cmb_skill7">
                 <property name="geometry">
                  <rect>
-                  <x>4</x>
-                  <y>26</y>
-                  <width>120</width>
-                  <height>33</height>
+                  <x>5</x>
+                  <y>210</y>
+                  <width>115</width>
+                  <height>30</height>
                  </rect>
                 </property>
                 <property name="minimumSize">
                  <size>
-                  <width>100</width>
-                  <height>33</height>
+                  <width>115</width>
+                  <height>30</height>
                  </size>
-                </property>
-                <property name="font">
-                 <font>
-                  <pointsize>8</pointsize>
-                 </font>
-                </property>
-                <property name="styleSheet">
-                 <string notr="true"/>
-                </property>
-                <property name="iconSize">
-                 <size>
-                  <width>33</width>
-                  <height>33</height>
-                 </size>
-                </property>
-               </widget>
-               <widget class="QComboBox" name="cmb_skill1_level">
-                <property name="geometry">
-                 <rect>
-                  <x>128</x>
-                  <y>26</y>
-                  <width>60</width>
-                  <height>22</height>
-                 </rect>
                 </property>
                 <property name="maximumSize">
                  <size>
-                  <width>60</width>
-                  <height>16777215</height>
-                 </size>
-                </property>
-                <property name="styleSheet">
-                 <string notr="true"/>
-                </property>
-                <property name="currentIndex">
-                 <number>1</number>
-                </property>
-                <item>
-                 <property name="text">
-                  <string>None</string>
-                 </property>
-                </item>
-                <item>
-                 <property name="text">
-                  <string>Basic</string>
-                 </property>
-                </item>
-                <item>
-                 <property name="text">
-                  <string>Advanced</string>
-                 </property>
-                </item>
-                <item>
-                 <property name="text">
-                  <string>Expert</string>
-                 </property>
-                </item>
-               </widget>
-               <widget class="QComboBox" name="cmb_skill2">
-                <property name="geometry">
-                 <rect>
-                  <x>4</x>
-                  <y>59</y>
-                  <width>120</width>
-                  <height>33</height>
-                 </rect>
-                </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>100</width>
-                  <height>33</height>
+                  <width>16777215</width>
+                  <height>30</height>
                  </size>
                 </property>
                 <property name="font">
@@ -744,21 +687,18 @@
                   <pointsize>8</pointsize>
                  </font>
                 </property>
-                <property name="styleSheet">
-                 <string notr="true"/>
-                </property>
                 <property name="iconSize">
                  <size>
-                  <width>33</width>
-                  <height>33</height>
+                  <width>30</width>
+                  <height>30</height>
                  </size>
                 </property>
                </widget>
                <widget class="QComboBox" name="cmb_skill2_level">
                 <property name="geometry">
                  <rect>
-                  <x>128</x>
-                  <y>59</y>
+                  <x>125</x>
+                  <y>50</y>
                   <width>60</width>
                   <height>22</height>
                  </rect>
@@ -796,311 +736,11 @@
                  </property>
                 </item>
                </widget>
-               <widget class="QComboBox" name="cmb_skill3">
-                <property name="geometry">
-                 <rect>
-                  <x>4</x>
-                  <y>93</y>
-                  <width>120</width>
-                  <height>33</height>
-                 </rect>
-                </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>100</width>
-                  <height>33</height>
-                 </size>
-                </property>
-                <property name="font">
-                 <font>
-                  <pointsize>8</pointsize>
-                 </font>
-                </property>
-                <property name="styleSheet">
-                 <string notr="true"/>
-                </property>
-                <property name="iconSize">
-                 <size>
-                  <width>33</width>
-                  <height>33</height>
-                 </size>
-                </property>
-               </widget>
-               <widget class="QComboBox" name="cmb_skill3_level">
-                <property name="geometry">
-                 <rect>
-                  <x>128</x>
-                  <y>93</y>
-                  <width>60</width>
-                  <height>22</height>
-                 </rect>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>60</width>
-                  <height>16777215</height>
-                 </size>
-                </property>
-                <property name="styleSheet">
-                 <string notr="true"/>
-                </property>
-                <property name="currentIndex">
-                 <number>0</number>
-                </property>
-                <item>
-                 <property name="text">
-                  <string>None</string>
-                 </property>
-                </item>
-                <item>
-                 <property name="text">
-                  <string>Basic</string>
-                 </property>
-                </item>
-                <item>
-                 <property name="text">
-                  <string>Advanced</string>
-                 </property>
-                </item>
-                <item>
-                 <property name="text">
-                  <string>Expert</string>
-                 </property>
-                </item>
-               </widget>
-               <widget class="QComboBox" name="cmb_skill4">
-                <property name="geometry">
-                 <rect>
-                  <x>4</x>
-                  <y>126</y>
-                  <width>120</width>
-                  <height>33</height>
-                 </rect>
-                </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>100</width>
-                  <height>33</height>
-                 </size>
-                </property>
-                <property name="font">
-                 <font>
-                  <pointsize>8</pointsize>
-                 </font>
-                </property>
-                <property name="styleSheet">
-                 <string notr="true"/>
-                </property>
-                <property name="iconSize">
-                 <size>
-                  <width>33</width>
-                  <height>33</height>
-                 </size>
-                </property>
-               </widget>
-               <widget class="QComboBox" name="cmb_skill4_level">
-                <property name="geometry">
-                 <rect>
-                  <x>128</x>
-                  <y>126</y>
-                  <width>60</width>
-                  <height>22</height>
-                 </rect>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>60</width>
-                  <height>16777215</height>
-                 </size>
-                </property>
-                <property name="currentIndex">
-                 <number>0</number>
-                </property>
-                <item>
-                 <property name="text">
-                  <string>None</string>
-                 </property>
-                </item>
-                <item>
-                 <property name="text">
-                  <string>Basic</string>
-                 </property>
-                </item>
-                <item>
-                 <property name="text">
-                  <string>Advanced</string>
-                 </property>
-                </item>
-                <item>
-                 <property name="text">
-                  <string>Expert</string>
-                 </property>
-                </item>
-               </widget>
-               <widget class="QComboBox" name="cmb_skill5">
-                <property name="geometry">
-                 <rect>
-                  <x>4</x>
-                  <y>159</y>
-                  <width>120</width>
-                  <height>33</height>
-                 </rect>
-                </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>100</width>
-                  <height>33</height>
-                 </size>
-                </property>
-                <property name="font">
-                 <font>
-                  <pointsize>8</pointsize>
-                 </font>
-                </property>
-                <property name="iconSize">
-                 <size>
-                  <width>33</width>
-                  <height>33</height>
-                 </size>
-                </property>
-               </widget>
-               <widget class="QComboBox" name="cmb_skill5_level">
-                <property name="geometry">
-                 <rect>
-                  <x>128</x>
-                  <y>159</y>
-                  <width>60</width>
-                  <height>22</height>
-                 </rect>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>60</width>
-                  <height>16777215</height>
-                 </size>
-                </property>
-                <property name="currentIndex">
-                 <number>0</number>
-                </property>
-                <item>
-                 <property name="text">
-                  <string>None</string>
-                 </property>
-                </item>
-                <item>
-                 <property name="text">
-                  <string>Basic</string>
-                 </property>
-                </item>
-                <item>
-                 <property name="text">
-                  <string>Advanced</string>
-                 </property>
-                </item>
-                <item>
-                 <property name="text">
-                  <string>Expert</string>
-                 </property>
-                </item>
-               </widget>
-               <widget class="QComboBox" name="cmb_skill6">
-                <property name="geometry">
-                 <rect>
-                  <x>4</x>
-                  <y>193</y>
-                  <width>120</width>
-                  <height>33</height>
-                 </rect>
-                </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>100</width>
-                  <height>33</height>
-                 </size>
-                </property>
-                <property name="font">
-                 <font>
-                  <pointsize>8</pointsize>
-                 </font>
-                </property>
-                <property name="iconSize">
-                 <size>
-                  <width>33</width>
-                  <height>33</height>
-                 </size>
-                </property>
-               </widget>
                <widget class="QComboBox" name="cmb_skill6_level">
                 <property name="geometry">
                  <rect>
-                  <x>128</x>
-                  <y>193</y>
-                  <width>60</width>
-                  <height>22</height>
-                 </rect>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>60</width>
-                  <height>16777215</height>
-                 </size>
-                </property>
-                <property name="currentIndex">
-                 <number>0</number>
-                </property>
-                <item>
-                 <property name="text">
-                  <string>None</string>
-                 </property>
-                </item>
-                <item>
-                 <property name="text">
-                  <string>Basic</string>
-                 </property>
-                </item>
-                <item>
-                 <property name="text">
-                  <string>Advanced</string>
-                 </property>
-                </item>
-                <item>
-                 <property name="text">
-                  <string>Expert</string>
-                 </property>
-                </item>
-               </widget>
-               <widget class="QComboBox" name="cmb_skill7">
-                <property name="geometry">
-                 <rect>
-                  <x>4</x>
-                  <y>226</y>
-                  <width>120</width>
-                  <height>33</height>
-                 </rect>
-                </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>100</width>
-                  <height>33</height>
-                 </size>
-                </property>
-                <property name="font">
-                 <font>
-                  <pointsize>8</pointsize>
-                 </font>
-                </property>
-                <property name="iconSize">
-                 <size>
-                  <width>33</width>
-                  <height>33</height>
-                 </size>
-                </property>
-               </widget>
-               <widget class="QComboBox" name="cmb_skill7_level">
-                <property name="geometry">
-                 <rect>
-                  <x>128</x>
-                  <y>226</y>
+                  <x>125</x>
+                  <y>178</y>
                   <width>60</width>
                   <height>22</height>
                  </rect>
@@ -1138,16 +778,22 @@
                <widget class="QComboBox" name="cmb_skill8">
                 <property name="geometry">
                  <rect>
-                  <x>4</x>
-                  <y>259</y>
-                  <width>120</width>
-                  <height>33</height>
+                  <x>5</x>
+                  <y>242</y>
+                  <width>115</width>
+                  <height>30</height>
                  </rect>
                 </property>
                 <property name="minimumSize">
                  <size>
-                  <width>100</width>
-                  <height>33</height>
+                  <width>115</width>
+                  <height>30</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>30</height>
                  </size>
                 </property>
                 <property name="font">
@@ -1157,16 +803,88 @@
                 </property>
                 <property name="iconSize">
                  <size>
-                  <width>33</width>
-                  <height>33</height>
+                  <width>30</width>
+                  <height>30</height>
+                 </size>
+                </property>
+               </widget>
+               <widget class="QComboBox" name="cmb_skill2">
+                <property name="geometry">
+                 <rect>
+                  <x>5</x>
+                  <y>50</y>
+                  <width>115</width>
+                  <height>30</height>
+                 </rect>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>115</width>
+                  <height>30</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>30</height>
+                 </size>
+                </property>
+                <property name="font">
+                 <font>
+                  <pointsize>8</pointsize>
+                 </font>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true"/>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>30</width>
+                  <height>30</height>
+                 </size>
+                </property>
+               </widget>
+               <widget class="QComboBox" name="cmb_skill3">
+                <property name="geometry">
+                 <rect>
+                  <x>5</x>
+                  <y>82</y>
+                  <width>115</width>
+                  <height>30</height>
+                 </rect>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>115</width>
+                  <height>30</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>30</height>
+                 </size>
+                </property>
+                <property name="font">
+                 <font>
+                  <pointsize>8</pointsize>
+                 </font>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true"/>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>30</width>
+                  <height>30</height>
                  </size>
                 </property>
                </widget>
                <widget class="QComboBox" name="cmb_skill8_level">
                 <property name="geometry">
                  <rect>
-                  <x>128</x>
-                  <y>259</y>
+                  <x>125</x>
+                  <y>242</y>
                   <width>60</width>
                   <height>22</height>
                  </rect>
@@ -1176,6 +894,345 @@
                   <width>60</width>
                   <height>16777215</height>
                  </size>
+                </property>
+                <property name="currentIndex">
+                 <number>0</number>
+                </property>
+                <item>
+                 <property name="text">
+                  <string>None</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Basic</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Advanced</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Expert</string>
+                 </property>
+                </item>
+               </widget>
+               <widget class="QComboBox" name="cmb_skill5">
+                <property name="geometry">
+                 <rect>
+                  <x>5</x>
+                  <y>146</y>
+                  <width>115</width>
+                  <height>30</height>
+                 </rect>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>115</width>
+                  <height>30</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>30</height>
+                 </size>
+                </property>
+                <property name="font">
+                 <font>
+                  <pointsize>8</pointsize>
+                 </font>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>30</width>
+                  <height>30</height>
+                 </size>
+                </property>
+               </widget>
+               <widget class="QComboBox" name="cmb_skill4_level">
+                <property name="geometry">
+                 <rect>
+                  <x>125</x>
+                  <y>114</y>
+                  <width>60</width>
+                  <height>22</height>
+                 </rect>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>60</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+                <property name="currentIndex">
+                 <number>0</number>
+                </property>
+                <item>
+                 <property name="text">
+                  <string>None</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Basic</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Advanced</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Expert</string>
+                 </property>
+                </item>
+               </widget>
+               <widget class="QComboBox" name="cmb_skill4">
+                <property name="geometry">
+                 <rect>
+                  <x>5</x>
+                  <y>114</y>
+                  <width>115</width>
+                  <height>30</height>
+                 </rect>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>115</width>
+                  <height>30</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>30</height>
+                 </size>
+                </property>
+                <property name="font">
+                 <font>
+                  <pointsize>8</pointsize>
+                 </font>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true"/>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>30</width>
+                  <height>30</height>
+                 </size>
+                </property>
+               </widget>
+               <widget class="QComboBox" name="cmb_skill1">
+                <property name="geometry">
+                 <rect>
+                  <x>5</x>
+                  <y>18</y>
+                  <width>115</width>
+                  <height>30</height>
+                 </rect>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>115</width>
+                  <height>30</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>30</height>
+                 </size>
+                </property>
+                <property name="font">
+                 <font>
+                  <pointsize>8</pointsize>
+                 </font>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true"/>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>30</width>
+                  <height>30</height>
+                 </size>
+                </property>
+               </widget>
+               <widget class="QComboBox" name="cmb_skill6">
+                <property name="geometry">
+                 <rect>
+                  <x>5</x>
+                  <y>178</y>
+                  <width>115</width>
+                  <height>30</height>
+                 </rect>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>115</width>
+                  <height>30</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>30</height>
+                 </size>
+                </property>
+                <property name="font">
+                 <font>
+                  <pointsize>8</pointsize>
+                 </font>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>30</width>
+                  <height>30</height>
+                 </size>
+                </property>
+               </widget>
+               <widget class="QComboBox" name="cmb_skill5_level">
+                <property name="geometry">
+                 <rect>
+                  <x>125</x>
+                  <y>146</y>
+                  <width>60</width>
+                  <height>22</height>
+                 </rect>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>60</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+                <property name="currentIndex">
+                 <number>0</number>
+                </property>
+                <item>
+                 <property name="text">
+                  <string>None</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Basic</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Advanced</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Expert</string>
+                 </property>
+                </item>
+               </widget>
+               <widget class="QComboBox" name="cmb_skill1_level">
+                <property name="geometry">
+                 <rect>
+                  <x>125</x>
+                  <y>18</y>
+                  <width>60</width>
+                  <height>22</height>
+                 </rect>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>60</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true"/>
+                </property>
+                <property name="currentIndex">
+                 <number>1</number>
+                </property>
+                <item>
+                 <property name="text">
+                  <string>None</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Basic</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Advanced</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Expert</string>
+                 </property>
+                </item>
+               </widget>
+               <widget class="QComboBox" name="cmb_skill7_level">
+                <property name="geometry">
+                 <rect>
+                  <x>125</x>
+                  <y>210</y>
+                  <width>60</width>
+                  <height>22</height>
+                 </rect>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>60</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+                <property name="currentIndex">
+                 <number>0</number>
+                </property>
+                <item>
+                 <property name="text">
+                  <string>None</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Basic</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Advanced</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Expert</string>
+                 </property>
+                </item>
+               </widget>
+               <widget class="QComboBox" name="cmb_skill3_level">
+                <property name="geometry">
+                 <rect>
+                  <x>125</x>
+                  <y>82</y>
+                  <width>60</width>
+                  <height>22</height>
+                 </rect>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>60</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true"/>
                 </property>
                 <property name="currentIndex">
                  <number>0</number>
@@ -1357,6 +1414,11 @@
               <layout class="QHBoxLayout" name="horizontalLayout_6">
                <item>
                 <widget class="QPushButton" name="btn_build_tree">
+                 <property name="font">
+                  <font>
+                   <bold>true</bold>
+                  </font>
+                 </property>
                  <property name="text">
                   <string>Build tree</string>
                  </property>
@@ -1391,6 +1453,18 @@
                <layout class="QVBoxLayout" name="verticalLayout_4">
                 <property name="spacing">
                  <number>2</number>
+                </property>
+                <property name="leftMargin">
+                 <number>5</number>
+                </property>
+                <property name="topMargin">
+                 <number>5</number>
+                </property>
+                <property name="rightMargin">
+                 <number>5</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>5</number>
                 </property>
                 <item>
                  <widget class="QPushButton" name="btn_find_way">
