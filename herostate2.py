@@ -4,6 +4,7 @@ from h3_data import skill_list, hero_classes_pri, magic_list
 # Author: Temig (https://github.com/temig74/)
 # Thanks to AlexSpl
 
+
 def rand(rold):
     rnew = (214013 * rold + 2531011) & 0b11111111111111111111111111111111
     q = (rnew // 0x10000) & 0b111111111111111
@@ -23,12 +24,10 @@ class HeroState:
         self.pri_skills = pri_skills
         self.wisdom_counter = wisdom_counter
         self.magic_counter = magic_counter
-
         self.skillway = skillway    # stores all chosen skills from start
 
-        #####recursive generation of full tree
-        #self.leftstate, self.rightstate, pri = self.get_next_levelup()
-
+        # Recursive generation of full tree
+        # self.leftstate, self.rightstate, pri = self.get_next_levelup()
 
     def rnd_new_magic(self, sec, exclude_skill=None):
         available_magics = {}
@@ -178,15 +177,15 @@ class HeroState:
                 left_skill = 'wisdom'
             elif magic_exception and has_magic_to_upgrade:
                 left_skill, sec = self.rnd_upgrade_magic(sec)
-                magic_exception = False ######
+                magic_exception = False
             else:
                 left_skill, sec = self.rnd_upgrade_skill(sec)
 
             if all_skills_count < 8:  # if there is a free slot
                 if wisdom_exception and ('wisdom' not in self.sec_skills):
                     right_skill = 'wisdom'
-                #elif magic_exception and magic_skills_are_available and ((not has_magic_to_upgrade) or wisdom_exception):   # Why wisdom exception here????
-                elif magic_exception and magic_skills_are_available: ######
+                # elif magic_exception and magic_skills_are_available and ((not has_magic_to_upgrade) or wisdom_exception):   # Why wisdom exception here????
+                elif magic_exception and magic_skills_are_available:
                     right_skill, sec = self.rnd_new_magic(sec, left_skill)
                 else:
                     right_skill, sec = self.rnd_new_skill(sec, left_skill)
@@ -233,7 +232,7 @@ class HeroState:
 
         return new_left_herostate, new_right_herostate, pri_skill
 
-    #find fastest ways to aquire skills
+    # find fastest ways to aquire skills
     def recursive_tree_search(self, max_level, target_skills, skillways: list, unwanted_skills: list):
         for skill in target_skills:
             if len(self.sec_skills) == 8 and skill not in self.sec_skills:
@@ -263,7 +262,7 @@ class HeroState:
 
 def find_tree_number(hero_class, hero_skills, hero_level, pri_skill, left_skill, right_skill, new_classes_sec, available_trees=None, last_wisdom=0, last_magic=0):
     correct_trees = []
-    if not available_trees:
+    if available_trees is None:
         available_trees = []
         for i in range(1, 256):
             available_trees.append(i)

@@ -1,5 +1,60 @@
 magic_list = ('fire magic', 'air magic', 'water magic', 'earth magic')
 
+pri_ru = {'атака': 'attack', 'защита': 'defence', 'сп': 'sp', 'знание': 'knowledge'}
+
+hero_skills_ru = {
+                'поиск пути':'pathfinding',
+                'стрельба': 'archery',
+                'логистика': 'logistics',
+                'разведка': 'scouting',
+                'дипломатия': 'diplomacy',
+                'навигация': 'navigation',
+                'лидерство': 'leadership',
+                'мудрость': 'wisdom',
+                'мистицизм': 'mysticism',
+                'удача': 'luck',
+                'баллистика': 'ballistics',
+                'орлиный глаз': 'eagle eye',
+                'некромантия': 'necromancy',
+                'поместья': 'estates',
+                'магия огня': 'fire magic',
+                'магия воздуха': 'air magic',
+                'магия воды': 'water magic',
+                'магия земли': 'earth magic',
+                'грамотность': 'scholar',
+                'тактика': 'tactics',
+                'артиллерия': 'artillery',
+                'обучаемость': 'learning',
+                'нападение': 'offense',
+                'доспехи': 'armorer',
+                'интеллект': 'intelligence',
+                'волшебство': 'sorcery',
+                'сопротивление': 'resistance',
+                'первая помощь': 'first aid',
+                'помехи': 'interference'
+                  }
+
+hero_classes_ru = {'рыцарь': 'knight',
+              'священник': 'cleric',
+              'рейнджер': 'ranger',
+              'друид': 'druid',
+              'алхимик': 'alchemist',
+              'волшебник': 'wizard',
+              'одержимый': 'demoniac',
+              'еретик': 'heretic',
+              'рыцарь смерти': 'death knight',
+              'некромант': 'necromancer',
+              'лорд': 'overlord',
+              'чернокнижник': 'warlock',
+              'варвар': 'barbarian',
+              'боевой маг': 'battle mage',
+              'повелитель зверей': 'beastmaster',
+              'ведьма': 'witch',
+              'воитель стихий': 'planeswalker',
+              'элементалист': 'elementalist',
+              'капитан': 'captain',
+              'навигатор': 'navigator'}
+
 skill_list = ['pathfinding', 'archery', 'logistics', 'scouting', 'diplomacy', 'navigation', 'leadership', 'wisdom', 'mysticism', 'luck', 'ballistics', 'eagle eye', 'necromancy', 'estates', 'fire magic', 'air magic', 'water magic', 'earth magic', 'scholar', 'tactics', 'artillery', 'learning',
               'offense', 'armorer', 'intelligence', 'sorcery', 'resistance', 'first aid', 'interference']
 hero_classes_pri = {

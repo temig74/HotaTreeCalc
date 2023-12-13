@@ -3,7 +3,7 @@
 ################################################################################
 ## Form generated from reading UI file 'tree_calc.ui'
 ##
-## Created by: Qt User Interface Compiler version 6.6.0
+## Created by: Qt User Interface Compiler version 6.6.1
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
@@ -18,9 +18,9 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
 from PySide6.QtWidgets import (QApplication, QCheckBox, QComboBox, QFormLayout,
     QGridLayout, QGroupBox, QHBoxLayout, QHeaderView,
     QLabel, QLayout, QListWidget, QListWidgetItem,
-    QMainWindow, QPushButton, QSizePolicy, QSpinBox,
-    QTabWidget, QTextEdit, QTreeWidget, QTreeWidgetItem,
-    QVBoxLayout, QWidget)
+    QMainWindow, QPushButton, QSizePolicy, QSpacerItem,
+    QSpinBox, QTabWidget, QTextEdit, QTreeWidget,
+    QTreeWidgetItem, QVBoxLayout, QWidget)
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -47,6 +47,11 @@ class Ui_MainWindow(object):
         self.verticalLayout = QVBoxLayout()
         self.verticalLayout.setObjectName(u"verticalLayout")
         self.verticalLayout.setSizeConstraint(QLayout.SetMinimumSize)
+        self.cmb_language = QComboBox(self.centralwidget)
+        self.cmb_language.setObjectName(u"cmb_language")
+
+        self.verticalLayout.addWidget(self.cmb_language)
+
         self.label = QLabel(self.centralwidget)
         self.label.setObjectName(u"label")
         self.label.setMaximumSize(QSize(90, 16777215))
@@ -94,7 +99,7 @@ class Ui_MainWindow(object):
 
         self.label_14 = QLabel(self.centralwidget)
         self.label_14.setObjectName(u"label_14")
-        self.label_14.setMaximumSize(QSize(90, 16777215))
+        self.label_14.setMaximumSize(QSize(100, 16777215))
 
         self.verticalLayout.addWidget(self.label_14)
 
@@ -487,25 +492,13 @@ class Ui_MainWindow(object):
         self.verticalLayout_3.setContentsMargins(5, 5, 5, 5)
         self.gridLayout = QGridLayout()
         self.gridLayout.setObjectName(u"gridLayout")
-        self.gridLayout.setSizeConstraint(QLayout.SetMinimumSize)
-        self.label_6 = QLabel(self.groupBox_2)
-        self.label_6.setObjectName(u"label_6")
-
-        self.gridLayout.addWidget(self.label_6, 0, 0, 1, 1)
-
-        self.sb_tree_num = QSpinBox(self.groupBox_2)
-        self.sb_tree_num.setObjectName(u"sb_tree_num")
-        self.sb_tree_num.setMaximumSize(QSize(40, 16777215))
-        self.sb_tree_num.setMinimum(1)
-        self.sb_tree_num.setMaximum(255)
-
-        self.gridLayout.addWidget(self.sb_tree_num, 0, 1, 1, 1)
-
+        self.gridLayout.setSizeConstraint(QLayout.SetDefaultConstraint)
         self.label_8 = QLabel(self.groupBox_2)
         self.label_8.setObjectName(u"label_8")
+        self.label_8.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
         self.label_8.setWordWrap(True)
 
-        self.gridLayout.addWidget(self.label_8, 1, 0, 1, 3)
+        self.gridLayout.addWidget(self.label_8, 1, 1, 1, 4)
 
         self.sb_wisdom_counter = QSpinBox(self.groupBox_2)
         self.sb_wisdom_counter.setObjectName(u"sb_wisdom_counter")
@@ -514,13 +507,29 @@ class Ui_MainWindow(object):
         self.sb_wisdom_counter.setMaximum(30)
         self.sb_wisdom_counter.setValue(0)
 
-        self.gridLayout.addWidget(self.sb_wisdom_counter, 1, 3, 1, 2)
+        self.gridLayout.addWidget(self.sb_wisdom_counter, 1, 6, 1, 2)
 
-        self.label_9 = QLabel(self.groupBox_2)
-        self.label_9.setObjectName(u"label_9")
-        self.label_9.setWordWrap(True)
+        self.sb_tree_num = QSpinBox(self.groupBox_2)
+        self.sb_tree_num.setObjectName(u"sb_tree_num")
+        self.sb_tree_num.setMaximumSize(QSize(40, 16777215))
+        self.sb_tree_num.setMinimum(1)
+        self.sb_tree_num.setMaximum(255)
 
-        self.gridLayout.addWidget(self.label_9, 2, 0, 1, 3)
+        self.gridLayout.addWidget(self.sb_tree_num, 0, 2, 1, 1)
+
+        self.sb_cur_level = QSpinBox(self.groupBox_2)
+        self.sb_cur_level.setObjectName(u"sb_cur_level")
+        self.sb_cur_level.setMaximumSize(QSize(40, 16777215))
+        self.sb_cur_level.setMinimum(1)
+        self.sb_cur_level.setMaximum(30)
+
+        self.gridLayout.addWidget(self.sb_cur_level, 0, 6, 1, 2)
+
+        self.label_7 = QLabel(self.groupBox_2)
+        self.label_7.setObjectName(u"label_7")
+        self.label_7.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
+
+        self.gridLayout.addWidget(self.label_7, 0, 4, 1, 1)
 
         self.sb_magic_counter = QSpinBox(self.groupBox_2)
         self.sb_magic_counter.setObjectName(u"sb_magic_counter")
@@ -529,20 +538,27 @@ class Ui_MainWindow(object):
         self.sb_magic_counter.setMaximum(30)
         self.sb_magic_counter.setValue(0)
 
-        self.gridLayout.addWidget(self.sb_magic_counter, 2, 3, 1, 2)
+        self.gridLayout.addWidget(self.sb_magic_counter, 2, 6, 1, 2)
 
-        self.label_7 = QLabel(self.groupBox_2)
-        self.label_7.setObjectName(u"label_7")
+        self.label_9 = QLabel(self.groupBox_2)
+        self.label_9.setObjectName(u"label_9")
+        self.label_9.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
+        self.label_9.setWordWrap(True)
 
-        self.gridLayout.addWidget(self.label_7, 0, 2, 1, 1)
+        self.gridLayout.addWidget(self.label_9, 2, 1, 1, 4)
 
-        self.sb_cur_level = QSpinBox(self.groupBox_2)
-        self.sb_cur_level.setObjectName(u"sb_cur_level")
-        self.sb_cur_level.setMaximumSize(QSize(40, 16777215))
-        self.sb_cur_level.setMinimum(1)
-        self.sb_cur_level.setMaximum(30)
+        self.label_6 = QLabel(self.groupBox_2)
+        self.label_6.setObjectName(u"label_6")
 
-        self.gridLayout.addWidget(self.sb_cur_level, 0, 3, 1, 2)
+        self.gridLayout.addWidget(self.label_6, 0, 1, 1, 1)
+
+        self.horizontalSpacer = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.gridLayout.addItem(self.horizontalSpacer, 1, 0, 2, 1)
+
+        self.horizontalSpacer_2 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.gridLayout.addItem(self.horizontalSpacer_2, 0, 3, 1, 1)
 
 
         self.verticalLayout_3.addLayout(self.gridLayout)
@@ -636,15 +652,15 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout_9 = QHBoxLayout()
         self.horizontalLayout_9.setObjectName(u"horizontalLayout_9")
-        self.bnt_add_wanted = QPushButton(self.groupBox_3)
-        self.bnt_add_wanted.setObjectName(u"bnt_add_wanted")
+        self.btn_add_wanted = QPushButton(self.groupBox_3)
+        self.btn_add_wanted.setObjectName(u"btn_add_wanted")
 
-        self.horizontalLayout_9.addWidget(self.bnt_add_wanted)
+        self.horizontalLayout_9.addWidget(self.btn_add_wanted)
 
-        self.bnt_add_unwanted = QPushButton(self.groupBox_3)
-        self.bnt_add_unwanted.setObjectName(u"bnt_add_unwanted")
+        self.btn_add_unwanted = QPushButton(self.groupBox_3)
+        self.btn_add_unwanted.setObjectName(u"btn_add_unwanted")
 
-        self.horizontalLayout_9.addWidget(self.bnt_add_unwanted)
+        self.horizontalLayout_9.addWidget(self.btn_add_unwanted)
 
 
         self.verticalLayout_4.addLayout(self.horizontalLayout_9)
@@ -664,7 +680,8 @@ class Ui_MainWindow(object):
         self.cmb_wanted_unwanted_level.addItem("")
         self.cmb_wanted_unwanted_level.addItem("")
         self.cmb_wanted_unwanted_level.setObjectName(u"cmb_wanted_unwanted_level")
-        self.cmb_wanted_unwanted_level.setMaximumSize(QSize(50, 16777215))
+        self.cmb_wanted_unwanted_level.setMinimumSize(QSize(60, 0))
+        self.cmb_wanted_unwanted_level.setMaximumSize(QSize(60, 16777215))
 
         self.horizontalLayout_7.addWidget(self.cmb_wanted_unwanted_level)
 
@@ -748,7 +765,7 @@ class Ui_MainWindow(object):
         self.cmb_start1_level.setCurrentIndex(1)
         self.cmb_start2_level.setCurrentIndex(1)
         self.cmb_skill1_level.setCurrentIndex(1)
-        self.cmb_skill2_level.setCurrentIndex(1)
+        self.cmb_skill2_level.setCurrentIndex(0)
         self.cmb_skill3_level.setCurrentIndex(0)
         self.cmb_skill4_level.setCurrentIndex(0)
         self.cmb_skill5_level.setCurrentIndex(0)
@@ -761,7 +778,7 @@ class Ui_MainWindow(object):
     # setupUi
 
     def retranslateUi(self, MainWindow):
-        MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"Hota tree calc 1.04", None))
+        MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"Hota tree calc 1.05", None))
         self.label.setText(QCoreApplication.translate("MainWindow", u"Hero class", None))
         self.btn_ban_skill.setText(QCoreApplication.translate("MainWindow", u"Ban skill:", None))
         self.label_4.setText(QCoreApplication.translate("MainWindow", u"Banned skills:", None))
@@ -840,17 +857,17 @@ class Ui_MainWindow(object):
         self.cmb_skill8_level.setItemText(3, QCoreApplication.translate("MainWindow", u"Expert", None))
 
         self.groupBox_2.setTitle("")
-        self.label_6.setText(QCoreApplication.translate("MainWindow", u"Tree \u2116", None))
         self.label_8.setText(QCoreApplication.translate("MainWindow", u"Last level wisdom given", None))
-        self.label_9.setText(QCoreApplication.translate("MainWindow", u"Last level magic given", None))
         self.label_7.setText(QCoreApplication.translate("MainWindow", u"Cur. level", None))
+        self.label_9.setText(QCoreApplication.translate("MainWindow", u"Last level magic given", None))
+        self.label_6.setText(QCoreApplication.translate("MainWindow", u"Tree \u2116", None))
         self.label_10.setText(QCoreApplication.translate("MainWindow", u"PRIM", None))
         self.btn_build_tree.setText(QCoreApplication.translate("MainWindow", u"Build tree", None))
         self.btn_export_all_trees.setText(QCoreApplication.translate("MainWindow", u"Export all trees", None))
         self.groupBox_3.setTitle(QCoreApplication.translate("MainWindow", u"Way finder", None))
         self.btn_find_way.setText(QCoreApplication.translate("MainWindow", u"Find", None))
-        self.bnt_add_wanted.setText(QCoreApplication.translate("MainWindow", u"Add wanted", None))
-        self.bnt_add_unwanted.setText(QCoreApplication.translate("MainWindow", u"Add unwanted", None))
+        self.btn_add_wanted.setText(QCoreApplication.translate("MainWindow", u"Add wanted", None))
+        self.btn_add_unwanted.setText(QCoreApplication.translate("MainWindow", u"Add unwanted", None))
         self.cmb_wanted_unwanted_level.setItemText(0, QCoreApplication.translate("MainWindow", u"Basic", None))
         self.cmb_wanted_unwanted_level.setItemText(1, QCoreApplication.translate("MainWindow", u"Advanced", None))
         self.cmb_wanted_unwanted_level.setItemText(2, QCoreApplication.translate("MainWindow", u"Expert", None))
@@ -867,7 +884,7 @@ class Ui_MainWindow(object):
 "li.unchecked::marker { content: \"\\2610\"; }\n"
 "li.checked::marker { content: \"\\2612\"; }\n"
 "</style></head><body style=\" font-family:'Segoe UI'; font-size:14pt; font-weight:700; font-style:normal;\">\n"
-"<p align=\"center\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:20pt;\">Hota tree calc 1.04</span></p>\n"
+"<p align=\"center\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:20pt;\">Hota tree calc 1.05</span></p>\n"
 "<p align=\"center\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Author: Temig (temig7487@gmail.com)</p>\n"
 "<p align=\"center\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent"
                         ":0px;\">Idea and design based on <a href=\"https://handbookhmm.ru/forum/viewtopic.php?f=8&amp;t=42\"><span style=\" text-decoration: underline; color:#0078d4;\">LMOracle.</span></a> Thanks to it's author - AlexSpl</p>\n"
