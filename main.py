@@ -1,7 +1,7 @@
 import sys
-from PySide6.QtWidgets import QApplication, QMainWindow, QTreeWidgetItem, QMenu, QFileDialog, QListWidgetItem, QVBoxLayout, QHBoxLayout, QWidget
+from PySide6.QtWidgets import QApplication, QMainWindow, QTreeWidgetItem, QMenu, QFileDialog, QListWidgetItem
 from PySide6.QtGui import QPainter, QTextDocument, QAction, QFont, QIcon
-from PySide6.QtCore import Qt, QCoreApplication
+from PySide6.QtCore import Qt, QCoreApplication, QSize
 from PySide6.QtPrintSupport import QPrinter
 
 from ui_main import Ui_MainWindow
@@ -26,8 +26,8 @@ class SkillItem(QTreeWidgetItem):
         # set text of item on creating, it includes chosen skill, it's level and primary skills
         self.setText(0, f'lvl {herostate.cur_level} {herostate.chosen_skill} {herostate.sec_skills.get(herostate.chosen_skill, 0)} {herostate.pri_skills}')
 
-        # if herostate.chosen_skill in skill_list:
-        #    self.setIcon(0, QIcon(f'img/{herostate.chosen_skill}.png'))
+        if herostate.chosen_skill in skill_list:
+            self.setIcon(0, QIcon(f'img/{herostate.chosen_skill}.png'))
 
 
 class TreeCalc(QMainWindow):
@@ -156,6 +156,8 @@ class TreeCalc(QMainWindow):
 
         self.ui.lw_tree_numbers.setContextMenuPolicy(Qt.CustomContextMenu)
         self.ui.lw_tree_numbers.customContextMenuRequested.connect(self.show_tree_numbers_menu)
+
+        self.ui.tw_skills.setIconSize(QSize(33, 33))
 
     def change_language(self):
         if self.ui.cmb_language.currentIndex() == 0:

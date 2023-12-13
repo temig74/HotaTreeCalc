@@ -1,6 +1,7 @@
 # HotaTreeCalc
 Hota tree calc 1.05 changes:
 - added ru/en switch (all translated except skills)
+- added icons in skill tree
 
 Hota tree calc 1.04 changes:
 - now you can choose and add skills from comboboxes for banned, wanted, and unwanted skills
