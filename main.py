@@ -159,6 +159,10 @@ class TreeCalc(QMainWindow):
 
         self.ui.tw_skills.setIconSize(QSize(33, 33))
 
+
+    def reset_tree_browser(self):
+        pass
+
     def change_language(self):
         if self.ui.cmb_language.currentIndex() == 0:
             for elem in self.cmb_skill_list:
@@ -337,6 +341,10 @@ class TreeCalc(QMainWindow):
         self.ui.sb_cur_level.setValue(1)
         self.ui.sb_wisdom_counter.setValue(0)
         self.ui.sb_magic_counter.setValue(0)
+        self.ui.sb_attack.setValue(start_pri[hero_classes_ru.get(self.ui.cmb_hero_class.currentText(), self.ui.cmb_hero_class.currentText())][0])
+        self.ui.sb_defence.setValue(start_pri[hero_classes_ru.get(self.ui.cmb_hero_class.currentText(), self.ui.cmb_hero_class.currentText())][1])
+        self.ui.sb_sp.setValue(start_pri[hero_classes_ru.get(self.ui.cmb_hero_class.currentText(), self.ui.cmb_hero_class.currentText())][2])
+        self.ui.sb_knowledge.setValue(start_pri[hero_classes_ru.get(self.ui.cmb_hero_class.currentText(), self.ui.cmb_hero_class.currentText())][3])
 
         for cmb in self.cmb_skill_list:
             cmb[0].setCurrentIndex(0)
