@@ -1,4 +1,8 @@
 # HotaTreeCalc
+Hota tree calc 1.06 changes:
+- added new hero classes: mercenaries and artificers
+- navigators skill weights changed (according to changes in new Hota 1.7.0)
+
 Hota tree calc 1.05 changes:
 - added ru/en switch (all translated except skills)
 - added icons in skill tree

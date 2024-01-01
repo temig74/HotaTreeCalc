@@ -53,7 +53,9 @@ hero_classes_ru = {'рыцарь': 'knight',
               'воитель стихий': 'planeswalker',
               'элементалист': 'elementalist',
               'капитан': 'captain',
-              'навигатор': 'navigator'}
+              'навигатор': 'navigator',
+              'наемник': 'mercenary',
+              'изобретатель': 'artificer'}
 
 skill_list = ['pathfinding', 'archery', 'logistics', 'scouting', 'diplomacy', 'navigation', 'leadership', 'wisdom', 'mysticism', 'luck', 'ballistics', 'eagle eye', 'necromancy', 'estates', 'fire magic', 'air magic', 'water magic', 'earth magic', 'scholar', 'tactics', 'artillery', 'learning',
               'offense', 'armorer', 'intelligence', 'sorcery', 'resistance', 'first aid', 'interference']
@@ -77,7 +79,9 @@ hero_classes_pri = {
     'planeswalker': ((45, 25, 15, 15), (30, 30, 20, 20)),
     'elementalist': ((15, 15, 35, 35), (25, 25, 25, 25)),
     'captain': ((45, 25, 20, 10), (30, 30, 20, 20)),
-    'navigator': ((15, 10, 40, 35), (30, 20, 20, 30))
+    'navigator': ((15, 10, 40, 35), (30, 20, 20, 30)),
+    'mercenary': ((35, 35, 15, 15), (30, 30, 20, 20)),
+    'artificer': ((20, 15, 30, 35), (20, 20, 30, 30))
 }
 
 hero_classes_sec = {
@@ -100,7 +104,9 @@ hero_classes_sec = {
     'planeswalker': {'artillery': 8, 'ballistics': 8, 'sorcery': 1, 'scholar': 1, 'diplomacy': 2, 'armorer': 5, 'eagle eye': 2, 'estates': 3, 'intelligence': 1, 'leadership': 3, 'logistics': 8, 'water magic': 2, 'air magic': 2, 'earth magic': 3, 'fire magic': 3, 'mysticism': 3, 'wisdom': 2, 'navigation': 5, 'offense': 9, 'learning': 8, 'first aid': 1, 'pathfinding': 6, 'interference': 2, 'scouting': 6, 'resistance': 2, 'archery': 8, 'tactics': 8, 'luck': 2, 'necromancy': 0},
     'elementalist': {'artillery': 1, 'ballistics': 4, 'sorcery': 8, 'scholar': 8, 'diplomacy': 4, 'armorer': 1, 'eagle eye': 8, 'estates': 3, 'intelligence': 8, 'leadership': 3, 'logistics': 2, 'water magic': 6, 'air magic': 6, 'earth magic': 6, 'fire magic': 6, 'mysticism': 8, 'wisdom': 8, 'navigation': 4, 'offense': 1, 'learning': 4, 'first aid': 4, 'pathfinding': 2, 'interference': 0, 'scouting': 2, 'resistance': 0, 'archery': 2, 'tactics': 1, 'luck': 2, 'necromancy': 0},
     'captain': {'artillery': 5, 'ballistics': 5, 'sorcery': 2, 'scholar': 1, 'diplomacy': 5, 'armorer': 2, 'eagle eye': 4, 'estates': 4, 'intelligence': 3, 'leadership': 6, 'logistics': 6, 'water magic': 2, 'air magic': 3, 'earth magic': 4, 'fire magic': 2, 'mysticism': 1, 'wisdom': 1, 'navigation': 6, 'offense': 9, 'learning': 2, 'first aid': 2, 'pathfinding': 8, 'interference': 3, 'scouting': 4, 'resistance': 3, 'archery': 9, 'tactics': 6, 'luck': 7, 'necromancy': 0},
-    'navigator': {'artillery': 1, 'ballistics': 2, 'sorcery': 6, 'scholar': 5, 'diplomacy': 2, 'armorer': 1, 'eagle eye': 2, 'estates': 2, 'intelligence': 8, 'leadership': 2, 'logistics': 6, 'water magic': 9, 'air magic': 6, 'earth magic': 5, 'fire magic': 2, 'mysticism': 3, 'wisdom': 8, 'navigation': 2, 'offense': 4, 'learning': 4, 'first aid': 4, 'pathfinding': 6, 'interference': 1, 'scouting': 3, 'resistance': 5, 'archery': 6, 'tactics': 4, 'luck': 4, 'necromancy': 0}
+    'navigator': {'artillery': 1, 'ballistics': 2, 'sorcery': 6, 'scholar': 5, 'diplomacy': 2, 'armorer': 1, 'eagle eye': 2, 'estates': 2, 'intelligence': 8, 'leadership': 2, 'logistics': 3, 'water magic': 9, 'air magic': 6, 'earth magic': 5, 'fire magic': 2, 'mysticism': 3, 'wisdom': 8, 'navigation': 6, 'offense': 4, 'learning': 4, 'first aid': 4, 'pathfinding': 6, 'interference': 1, 'scouting': 2, 'resistance': 5, 'archery': 6, 'tactics': 4, 'luck': 4, 'necromancy': 0},
+    'mercenary': {'artillery': 6, 'ballistics': 6, 'sorcery': 2, 'scholar': 1, 'diplomacy': 7, 'armorer': 5, 'eagle eye': 2, 'estates': 3, 'intelligence': 2, 'leadership': 5, 'logistics': 7, 'water magic': 0, 'air magic': 3, 'earth magic': 3, 'fire magic': 3, 'mysticism': 1, 'wisdom': 3, 'navigation': 4, 'offense': 6, 'learning': 4, 'first aid': 3, 'pathfinding': 7, 'interference': 4, 'scouting': 5, 'resistance': 4, 'archery': 7, 'tactics': 8, 'luck': 5, 'necromancy': 0},
+    'artificer': {'artillery': 6, 'ballistics': 8, 'sorcery': 7, 'scholar': 5, 'diplomacy': 3, 'armorer': 3, 'eagle eye': 4, 'estates': 2, 'intelligence': 7, 'leadership': 2, 'logistics': 5, 'water magic': 3, 'air magic': 3, 'earth magic': 4, 'fire magic': 4, 'mysticism': 5, 'wisdom': 8, 'navigation': 4, 'offense': 2, 'learning': 4, 'first aid': 6, 'pathfinding': 3, 'interference': 0, 'scouting': 4, 'resistance': 0, 'archery': 4, 'tactics': 3, 'luck': 3, 'necromancy': 0}
 }
 
 start_pri = {'knight': (2, 2, 1, 1),
@@ -122,4 +128,6 @@ start_pri = {'knight': (2, 2, 1, 1),
     'planeswalker': (3, 1, 1, 1),
     'elementalist': (0, 0, 3, 3),
     'captain': (3, 0, 2, 1),
-    'navigator': (2, 0, 1, 2)}
+    'navigator': (2, 0, 1, 2),
+    'mercenary': (3, 1, 1, 1),
+    'artificer': (0, 1, 2, 2)}

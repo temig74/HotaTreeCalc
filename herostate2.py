@@ -123,7 +123,7 @@ class HeroState:
         new_level = self.cur_level + 1
         pri_skill, sec = self.get_next_primary_skill()
 
-        if self.hero_class in ('knight', 'ranger', 'alchemist', 'demoniac', 'death knight', 'overlord', 'barbarian', 'beastmaster', 'planeswalker', 'captain'):
+        if self.hero_class in ('knight', 'ranger', 'alchemist', 'demoniac', 'death knight', 'overlord', 'barbarian', 'beastmaster', 'planeswalker', 'captain', 'mercenary'):
             delta_wisdom = 6
             delta_magic = 4
         else:
