@@ -1,4 +1,7 @@
 # HotaTreeCalc
+Hota tree calc 1.06a changes:
+- fixed wrong tree build on maps where wisdom is banned (e.g. vietnamese diplomacy)
+
 Hota tree calc 1.06 changes:
 - added new hero classes: mercenaries and artificers
 - navigators skill weights changed (according to changes in new Hota 1.7.0)

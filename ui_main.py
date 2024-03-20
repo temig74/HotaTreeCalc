@@ -778,7 +778,7 @@ class Ui_MainWindow(object):
     # setupUi
 
     def retranslateUi(self, MainWindow):
-        MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"Hota tree calc 1.06", None))
+        MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"Hota tree calc 1.06a", None))
         self.label.setText(QCoreApplication.translate("MainWindow", u"Hero class", None))
         self.btn_ban_skill.setText(QCoreApplication.translate("MainWindow", u"Ban skill:", None))
         self.label_4.setText(QCoreApplication.translate("MainWindow", u"Banned skills:", None))
@@ -884,29 +884,29 @@ class Ui_MainWindow(object):
 "li.unchecked::marker { content: \"\\2610\"; }\n"
 "li.checked::marker { content: \"\\2612\"; }\n"
 "</style></head><body style=\" font-family:'Segoe UI'; font-size:14pt; font-weight:700; font-style:normal;\">\n"
-"<p align=\"center\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:20pt;\">Hota tree calc 1.06</span></p>\n"
+"<p align=\"center\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:20pt;\">Hota tree calc 1.06a</span></p>\n"
 "<p align=\"center\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Author: Temig (temig7487@gmail.com)</p>\n"
-"<p align=\"center\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent"
-                        ":0px;\">Idea and design based on <a href=\"https://handbookhmm.ru/forum/viewtopic.php?f=8&amp;t=42\"><span style=\" text-decoration: underline; color:#0078d4;\">LMOracle.</span></a> Thanks to it's author - AlexSpl</p>\n"
+"<p align=\"center\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-inden"
+                        "t:0px;\">Idea and design based on <a href=\"https://handbookhmm.ru/forum/viewtopic.php?f=8&amp;t=42\"><span style=\" text-decoration: underline; color:#0078d4;\">LMOracle.</span></a> Thanks to it's author - AlexSpl</p>\n"
 "<p align=\"center\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Some information about tree generation can be found <a href=\"http://heroescommunity.com/viewthread.php3?TID=17812&amp;pagenumber=12\"><span style=\" text-decoration: underline; color:#0078d4;\">here</span></a></p>\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" color:#ff0101;\">This program does NOT interact with Hota memory, it's just a help resource (like </span><a href=\"https://www.heroes3assist.com/\"><span style=\" text-decoration: underline; color:#0078d4;\">Heroes3 assist</span></a><span style=\" color:#ff0101;\">) that can calculate tree "
-                        "number from a given first level-ups and build a specific tree.</span></p>\n"
+"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" color:#ff0101;\">This program does NOT interact with Hota memory, it's just a help resource (like </span><a href=\"https://www.heroes3assist.com/\"><span style=\" text-decoration: underline; color:#0078d4;\">Heroes3 assist</span></a><span style=\" color:#ff0101;\">) that can calculate tree"
+                        " number from a given first level-ups and build a specific tree.</span></p>\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Another useful information resources:</p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><a href=\"https://vk.com/fizmig\"><span style=\" text-decoration: underline; color:#0078d4;\">Fizmig</span></a></p>\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">If you like this program, you can <a href=\"https://github.com/temig74/HotaTreeCalc/blob/master/"
-                        "README.md\"><span style=\" text-decoration: underline; color:#0078d4;\">donate</span></a> author (view readme)</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">If you like this program, you can <a href=\"https://github.com/temig74/HotaTreeCalc/blob/master"
+                        "/README.md\"><span style=\" text-decoration: underline; color:#0078d4;\">donate</span></a> author (view readme)</p>\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Video instructions can be found <a href=\"https://www.youtube.com/@temig74\"><span style=\" text-decoration: underline; color:#0078d4;\">here</span></a></p>\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; text-decoration: underline; color:#0078d4;\"><br /></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Check for new versions <a href=\"https://github.com/temig74/HotaTreeCalc/releases\"><span style=\" text-decoration: underline; color:#0078"
-                        "d4;\">here on github</span></a></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Check for new versions <a href=\"https://github.com/temig74/HotaTreeCalc/releases\"><span style=\" text-decoration: underline; color:#007"
+                        "8d4;\">here on github</span></a></p>\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; text-decoration: underline; color:#0078d4;\"><br /></p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt;\">I also inform, that 03.12.2023 </span><a href=\"https://h3hota.com/en/rules\"><span style=\" text-decoration: underline; color:#0078d4;\">rules</span></a><span style=\" font-size:10pt;\"> of rated games </span><a href=\"https://forum.heroesworld.ru/showthread.php?t=7340&amp;page=149\"><span style=\" text-decoration: underline; color:#0078d4;\">were updated</span></a><span style=\" font-size:10pt;\">:</span></p>\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;\"><br /></p>\n"
-"<p style=\" margin-top:0px; mar"
-                        "gin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt;\">&quot;Browsing the map content or hero levelling tree with side programs (no matter if they read data from game memory, use side databases, generators or other methods) is the same level of a violation as map-hacking.&quot;</span></p>\n"
+"<p style=\" margin-top:0px; ma"
+                        "rgin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt;\">&quot;Browsing the map content or hero levelling tree with side programs (no matter if they read data from game memory, use side databases, generators or other methods) is the same level of a violation as map-hacking.&quot;</span></p>\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;\"><br /></p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt;\">You can use this program in non-rated games by mutual agreement of both players and for educational purposes.</span></p></body></html>", None))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_3), QCoreApplication.translate("MainWindow", u"About", None))

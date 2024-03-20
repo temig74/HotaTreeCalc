@@ -130,7 +130,7 @@ class HeroState:
             delta_wisdom = 3
             delta_magic = 3
 
-        wisdom_exception = (self.wisdom_counter + delta_wisdom <= new_level)
+        wisdom_exception = (self.wisdom_counter + delta_wisdom <= new_level) and self.skill_weights['wisdom'] > 0
         magic_exception = (self.magic_counter + delta_magic <= new_level)
 
         expert_skills_count = 0
@@ -160,7 +160,7 @@ class HeroState:
                     left_skill, sec = self.rnd_new_skill(sec)
                 right_skill, sec = self.rnd_new_skill(sec, left_skill)
             else:
-                if wisdom_exception:
+                if wisdom_exception: #and self.skill_weights['wisdom'] > 0:
                     left_skill = 'wisdom'
                     if magic_exception and magic_skills_are_available:
                         right_skill, sec = self.rnd_new_magic(sec, left_skill)
@@ -182,7 +182,7 @@ class HeroState:
                 left_skill, sec = self.rnd_upgrade_skill(sec)
 
             if all_skills_count < 8:  # if there is a free slot
-                if wisdom_exception and ('wisdom' not in self.sec_skills):
+                if wisdom_exception and ('wisdom' not in self.sec_skills): # and self.skill_weights['wisdom'] > 0:
                     right_skill = 'wisdom'
                 # elif magic_exception and magic_skills_are_available and ((not has_magic_to_upgrade) or wisdom_exception):   # Why wisdom exception here????
                 elif magic_exception and magic_skills_are_available:
