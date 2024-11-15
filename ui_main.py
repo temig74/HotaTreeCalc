@@ -778,7 +778,7 @@ class Ui_MainWindow(object):
     # setupUi
 
     def retranslateUi(self, MainWindow):
-        MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"Hota tree calc 1.06a", None))
+        MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"Hota tree calc 1.07", None))
         self.label.setText(QCoreApplication.translate("MainWindow", u"Hero class", None))
         self.btn_ban_skill.setText(QCoreApplication.translate("MainWindow", u"Ban skill:", None))
         self.label_4.setText(QCoreApplication.translate("MainWindow", u"Banned skills:", None))
@@ -884,7 +884,7 @@ class Ui_MainWindow(object):
 "li.unchecked::marker { content: \"\\2610\"; }\n"
 "li.checked::marker { content: \"\\2612\"; }\n"
 "</style></head><body style=\" font-family:'Segoe UI'; font-size:14pt; font-weight:700; font-style:normal;\">\n"
-"<p align=\"center\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:20pt;\">Hota tree calc 1.06a</span></p>\n"
+"<p align=\"center\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:20pt;\">Hota tree calc 1.07</span></p>\n"
 "<p align=\"center\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Author: Temig (temig7487@gmail.com)</p>\n"
 "<p align=\"center\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-inden"
                         "t:0px;\">Idea and design based on <a href=\"https://handbookhmm.ru/forum/viewtopic.php?f=8&amp;t=42\"><span style=\" text-decoration: underline; color:#0078d4;\">LMOracle.</span></a> Thanks to it's author - AlexSpl</p>\n"
