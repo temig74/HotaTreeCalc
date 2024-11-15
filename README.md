@@ -1,4 +1,7 @@
 # HotaTreeCalc
+Hota tree calc 1.07 changes:
+- added different images of skills based on skill level in tree browser
+
 Hota tree calc 1.06a changes:
 - fixed wrong tree build on maps where wisdom is banned (e.g. vietnamese diplomacy)
 
@@ -48,6 +51,6 @@ All players should be in equal conditions and choose whether to use calculators 
 - Fizmig: https://vk.com/fizmig
 
 - If you like this program, you can donate author:
-- 5536 9138 8657 7465 Tinkoff
+- 5536 9138 8657 7465 T-bank
 - https://boosty.to/temig/donate
-- ETH 0xcd52973C06Fb68834570107F1D2b0d90d64D08F1
+- USDT TBwC4TCnWBd1qEX6YiHKmAgNXGh1cqkWJW (TRC20)

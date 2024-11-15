@@ -27,7 +27,7 @@ class SkillItem(QTreeWidgetItem):
         self.setText(0, f'lvl {herostate.cur_level} {herostate.chosen_skill} {herostate.sec_skills.get(herostate.chosen_skill, 0)} {herostate.pri_skills}')
 
         if herostate.chosen_skill in skill_list:
-            self.setIcon(0, QIcon(f'img/{herostate.chosen_skill}.png'))
+            self.setIcon(0, QIcon(f'img/{herostate.chosen_skill}{herostate.sec_skills.get(herostate.chosen_skill, 0)}.png'))
 
 
 class TreeCalc(QMainWindow):
