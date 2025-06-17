@@ -70,6 +70,7 @@ class TreeCalc(QMainWindow):
         self.ui.sb_cur_level.setStyleSheet('background-color: rgb(106, 70, 40);')
         self.ui.sb_wisdom_counter.setStyleSheet('background-color: rgb(106, 70, 40);')
         self.ui.sb_magic_counter.setStyleSheet('background-color: rgb(106, 70, 40);')
+        self.ui.sb_learning_level.setStyleSheet('background-color: rgb(106, 70, 40);')
         self.ui.sb_attack.setStyleSheet('background-color: rgb(106, 70, 40);')
         self.ui.sb_defence.setStyleSheet('background-color: rgb(106, 70, 40);')
         self.ui.sb_sp.setStyleSheet('background-color: rgb(106, 70, 40);')
@@ -150,7 +151,8 @@ class TreeCalc(QMainWindow):
         self.ui.btn_add_unwanted.clicked.connect(self.add_unwanted_skill)
         self.ui.lw_unwanted_skills.setContextMenuPolicy(Qt.CustomContextMenu)
         self.ui.lw_unwanted_skills.customContextMenuRequested.connect(self.show_lw_skills_menu)
-        default_unwanted = ('eagle eye', 'first aid', 'learning')
+
+        default_unwanted = ('eagle eye',)
         for elem in default_unwanted:
             self.ui.lw_unwanted_skills.addItem(QListWidgetItem(QIcon(f'img/{elem}.png'), elem))
 
@@ -202,6 +204,7 @@ class TreeCalc(QMainWindow):
             self.ui.label_7.setText('Cur. level')
             self.ui.label_8.setText('Last level wisdom given')
             self.ui.label_9.setText('Last level magic given')
+            self.ui.label_13.setText('Last level learning given')
             self.ui.label_10.setText('PRIM')
             self.ui.btn_build_tree.setFont(QFont('Segoe UI', 9))
             self.ui.btn_build_tree.setText('Build tree')
@@ -284,6 +287,7 @@ class TreeCalc(QMainWindow):
             self.ui.label_7.setText('Текущ. ур.')
             self.ui.label_8.setText('Ур., когда давали мудрость')
             self.ui.label_9.setText('Ур., когда давали магию')
+            self.ui.label_13.setText('Ур., когда продв. обуч-сть')
             self.ui.label_10.setText('Перв.')
             self.ui.btn_build_tree.setFont(QFont('Segoe UI', 8))
             self.ui.btn_build_tree.setText('Построить дерево')
@@ -341,6 +345,7 @@ class TreeCalc(QMainWindow):
         self.ui.sb_cur_level.setValue(1)
         self.ui.sb_wisdom_counter.setValue(0)
         self.ui.sb_magic_counter.setValue(0)
+        self.ui.sb_learning_level.setValue(1)
         self.ui.sb_attack.setValue(start_pri[hero_classes_ru.get(self.ui.cmb_hero_class.currentText(), self.ui.cmb_hero_class.currentText())][0])
         self.ui.sb_defence.setValue(start_pri[hero_classes_ru.get(self.ui.cmb_hero_class.currentText(), self.ui.cmb_hero_class.currentText())][1])
         self.ui.sb_sp.setValue(start_pri[hero_classes_ru.get(self.ui.cmb_hero_class.currentText(), self.ui.cmb_hero_class.currentText())][2])
@@ -459,6 +464,7 @@ class TreeCalc(QMainWindow):
             self.ui.sb_cur_level.setValue(cur_herostate.cur_level)
             self.ui.sb_wisdom_counter.setValue(cur_herostate.wisdom_counter)
             self.ui.sb_magic_counter.setValue(cur_herostate.magic_counter)
+            self.ui.sb_learning_level.setValue(cur_herostate.get_learning_level)
             self.ui.sb_attack.setValue(cur_herostate.pri_skills[0])
             self.ui.sb_defence.setValue(cur_herostate.pri_skills[1])
             self.ui.sb_sp.setValue(cur_herostate.pri_skills[2])
@@ -598,7 +604,7 @@ class TreeCalc(QMainWindow):
         for banned_skill in [self.ui.lw_banned_skills.item(i).text() for i in range(self.ui.lw_banned_skills.count())]:
             new_skills_table[banned_skill] = 0
 
-        root_item = SkillItem(HeroState(root_sec_skills, self.ui.sb_cur_level.value(), self.ui.sb_tree_num.value(), hero_classes_ru.get(self.ui.cmb_hero_class.currentText(), self.ui.cmb_hero_class.currentText()), new_skills_table, 'Start', root_pri_skills, self.ui.sb_wisdom_counter.value(), self.ui.sb_magic_counter.value()))
+        root_item = SkillItem(HeroState(root_sec_skills, self.ui.sb_cur_level.value(), self.ui.sb_tree_num.value(), hero_classes_ru.get(self.ui.cmb_hero_class.currentText(), self.ui.cmb_hero_class.currentText()), new_skills_table, 'Start', root_pri_skills, self.ui.sb_wisdom_counter.value(), self.ui.sb_magic_counter.value(),'',self.ui.sb_learning_level.value()))
         root_item.setText(0, f'lvl{self.ui.sb_cur_level.value()} {self.ui.cmb_hero_class.currentText()} {root_pri_skills}')
         self.ui.tw_skills.addTopLevelItem(root_item)
 

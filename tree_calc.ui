@@ -210,7 +210,7 @@
        <string notr="true"/>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>1</number>
       </property>
       <property name="tabsClosable">
        <bool>false</bool>
@@ -1263,38 +1263,13 @@
                  </property>
                 </widget>
                </item>
-               <item row="1" column="6" colspan="2">
-                <widget class="QSpinBox" name="sb_wisdom_counter">
-                 <property name="maximumSize">
-                  <size>
-                   <width>40</width>
-                   <height>16777215</height>
-                  </size>
+               <item row="0" column="4">
+                <widget class="QLabel" name="label_7">
+                 <property name="text">
+                  <string>Cur. level</string>
                  </property>
-                 <property name="minimum">
-                  <number>0</number>
-                 </property>
-                 <property name="maximum">
-                  <number>30</number>
-                 </property>
-                 <property name="value">
-                  <number>0</number>
-                 </property>
-                </widget>
-               </item>
-               <item row="0" column="2">
-                <widget class="QSpinBox" name="sb_tree_num">
-                 <property name="maximumSize">
-                  <size>
-                   <width>40</width>
-                   <height>16777215</height>
-                  </size>
-                 </property>
-                 <property name="minimum">
-                  <number>1</number>
-                 </property>
-                 <property name="maximum">
-                  <number>255</number>
+                 <property name="alignment">
+                  <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                  </property>
                 </widget>
                </item>
@@ -1314,15 +1289,86 @@
                  </property>
                 </widget>
                </item>
-               <item row="0" column="4">
-                <widget class="QLabel" name="label_7">
+               <item row="0" column="2">
+                <widget class="QSpinBox" name="sb_tree_num">
+                 <property name="maximumSize">
+                  <size>
+                   <width>40</width>
+                   <height>16777215</height>
+                  </size>
+                 </property>
+                 <property name="minimum">
+                  <number>1</number>
+                 </property>
+                 <property name="maximum">
+                  <number>255</number>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="6" colspan="2">
+                <widget class="QSpinBox" name="sb_wisdom_counter">
+                 <property name="maximumSize">
+                  <size>
+                   <width>40</width>
+                   <height>16777215</height>
+                  </size>
+                 </property>
+                 <property name="minimum">
+                  <number>0</number>
+                 </property>
+                 <property name="maximum">
+                  <number>30</number>
+                 </property>
+                 <property name="value">
+                  <number>0</number>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="3">
+                <spacer name="horizontalSpacer_2">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item row="0" column="1">
+                <widget class="QLabel" name="label_6">
                  <property name="text">
-                  <string>Cur. level</string>
+                  <string>Tree №</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="1" colspan="4">
+                <widget class="QLabel" name="label_9">
+                 <property name="text">
+                  <string>Last level magic given</string>
                  </property>
                  <property name="alignment">
                   <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                  </property>
+                 <property name="wordWrap">
+                  <bool>true</bool>
+                 </property>
                 </widget>
+               </item>
+               <item row="1" column="0" rowspan="2">
+                <spacer name="horizontalSpacer">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
                </item>
                <item row="2" column="6" colspan="2">
                 <widget class="QSpinBox" name="sb_magic_counter">
@@ -1343,10 +1389,17 @@
                  </property>
                 </widget>
                </item>
-               <item row="2" column="1" colspan="4">
-                <widget class="QLabel" name="label_9">
+               <item row="3" column="6" colspan="2">
+                <widget class="QSpinBox" name="sb_learning_level">
+                 <property name="value">
+                  <number>1</number>
+                 </property>
+                </widget>
+               </item>
+               <item row="3" column="1" colspan="4">
+                <widget class="QLabel" name="label_13">
                  <property name="text">
-                  <string>Last level magic given</string>
+                  <string>Last level learning given</string>
                  </property>
                  <property name="alignment">
                   <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -1355,39 +1408,6 @@
                   <bool>true</bool>
                  </property>
                 </widget>
-               </item>
-               <item row="0" column="1">
-                <widget class="QLabel" name="label_6">
-                 <property name="text">
-                  <string>Tree №</string>
-                 </property>
-                </widget>
-               </item>
-               <item row="1" column="0" rowspan="2">
-                <spacer name="horizontalSpacer">
-                 <property name="orientation">
-                  <enum>Qt::Horizontal</enum>
-                 </property>
-                 <property name="sizeHint" stdset="0">
-                  <size>
-                   <width>40</width>
-                   <height>20</height>
-                  </size>
-                 </property>
-                </spacer>
-               </item>
-               <item row="0" column="3">
-                <spacer name="horizontalSpacer_2">
-                 <property name="orientation">
-                  <enum>Qt::Horizontal</enum>
-                 </property>
-                 <property name="sizeHint" stdset="0">
-                  <size>
-                   <width>40</width>
-                   <height>20</height>
-                  </size>
-                 </property>
-                </spacer>
                </item>
               </layout>
              </item>
@@ -1506,6 +1526,7 @@
                  <property name="font">
                   <font>
                    <pointsize>10</pointsize>
+                   <weight>75</weight>
                    <bold>true</bold>
                   </font>
                  </property>
@@ -1765,6 +1786,7 @@
         <property name="font">
          <font>
           <pointsize>14</pointsize>
+          <weight>75</weight>
           <bold>true</bold>
          </font>
         </property>

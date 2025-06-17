@@ -12,7 +12,7 @@ def rand(rold):
 
 
 class HeroState:
-    def __init__(self, sec_skills, cur_level, tree_number, hero_class, skill_weights, chosen_skill, pri_skills=None, wisdom_counter=0, magic_counter=0, skillway=''):
+    def __init__(self, sec_skills, cur_level, tree_number, hero_class, skill_weights, chosen_skill, pri_skills=None, wisdom_counter=0, magic_counter=0, skillway='', get_learning_level=1):
         if pri_skills is None:
             pri_skills = [0, 0, 0, 0]
         self.sec_skills = sec_skills
@@ -25,6 +25,10 @@ class HeroState:
         self.wisdom_counter = wisdom_counter
         self.magic_counter = magic_counter
         self.skillway = skillway    # stores all chosen skills from start
+        if self.chosen_skill == 'learning':
+            self.get_learning_level = self.cur_level
+        else:
+            self.get_learning_level = get_learning_level
 
         # Recursive generation of full tree
         # self.leftstate, self.rightstate, pri = self.get_next_levelup()
@@ -85,6 +89,12 @@ class HeroState:
                 if w == 0:
                     w = 1
                 available_skills[elem] = w
+
+        #1.7.3 learning fix
+        if (self.cur_level == self.get_learning_level) and ('learning' in available_skills) and len(available_skills) > 1:
+            del available_skills['learning']
+
+
         skill_sum = sum(available_skills.values())
         if skill_sum > 1:
             sec, q = rand(sec)
@@ -223,12 +233,20 @@ class HeroState:
         if left_skill:
             new_left_sec_skills = self.sec_skills.copy()
             new_left_sec_skills[left_skill] = new_left_sec_skills.get(left_skill, 0) + 1
-            new_left_herostate = HeroState(new_left_sec_skills, new_level, self.tree_number, self.hero_class, self.skill_weights, left_skill, new_pri_skills, new_wisdom_counter, new_magic_counter, self.skillway + '-' + left_skill + str(new_left_sec_skills[left_skill]))
+            if left_skill == 'learning':
+                level_learning_left = new_level
+            else:
+                level_learning_left = self.get_learning_level
+            new_left_herostate = HeroState(new_left_sec_skills, new_level, self.tree_number, self.hero_class, self.skill_weights, left_skill, new_pri_skills, new_wisdom_counter, new_magic_counter, self.skillway + '-' + left_skill + str(new_left_sec_skills[left_skill]), level_learning_left)
 
         if right_skill:
             new_right_sec_skills = self.sec_skills.copy()
             new_right_sec_skills[right_skill] = new_right_sec_skills.get(right_skill, 0) + 1
-            new_right_herostate = HeroState(new_right_sec_skills, new_level, self.tree_number, self.hero_class, self.skill_weights, right_skill, new_pri_skills, new_wisdom_counter, new_magic_counter, self.skillway + '-' + right_skill + str(new_right_sec_skills[right_skill]))
+            if right_skill == 'learning':
+                level_learning_right = new_level
+            else:
+                level_learning_right = self.get_learning_level
+            new_right_herostate = HeroState(new_right_sec_skills, new_level, self.tree_number, self.hero_class, self.skill_weights, right_skill, new_pri_skills, new_wisdom_counter, new_magic_counter, self.skillway + '-' + right_skill + str(new_right_sec_skills[right_skill]),level_learning_right)
 
         return new_left_herostate, new_right_herostate, pri_skill
 

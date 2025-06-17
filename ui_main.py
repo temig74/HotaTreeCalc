@@ -3,7 +3,7 @@
 ################################################################################
 ## Form generated from reading UI file 'tree_calc.ui'
 ##
-## Created by: Qt User Interface Compiler version 6.6.1
+## Created by: Qt User Interface Compiler version 6.6.2
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
@@ -27,7 +27,7 @@ class Ui_MainWindow(object):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
         MainWindow.resize(875, 700)
-        sizePolicy = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Preferred)
+        sizePolicy = QSizePolicy(QSizePolicy.Policy.Preferred, QSizePolicy.Policy.Preferred)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(MainWindow.sizePolicy().hasHeightForWidth())
@@ -37,7 +37,7 @@ class Ui_MainWindow(object):
         MainWindow.setIconSize(QSize(64, 64))
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
-        sizePolicy1 = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Ignored)
+        sizePolicy1 = QSizePolicy(QSizePolicy.Policy.Preferred, QSizePolicy.Policy.Ignored)
         sizePolicy1.setHorizontalStretch(0)
         sizePolicy1.setVerticalStretch(0)
         sizePolicy1.setHeightForWidth(self.centralwidget.sizePolicy().hasHeightForWidth())
@@ -115,7 +115,7 @@ class Ui_MainWindow(object):
 
         self.tabWidget = QTabWidget(self.centralwidget)
         self.tabWidget.setObjectName(u"tabWidget")
-        sizePolicy2 = QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
+        sizePolicy2 = QSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Expanding)
         sizePolicy2.setHorizontalStretch(0)
         sizePolicy2.setVerticalStretch(0)
         sizePolicy2.setHeightForWidth(self.tabWidget.sizePolicy().hasHeightForWidth())
@@ -500,22 +500,11 @@ class Ui_MainWindow(object):
 
         self.gridLayout.addWidget(self.label_8, 1, 1, 1, 4)
 
-        self.sb_wisdom_counter = QSpinBox(self.groupBox_2)
-        self.sb_wisdom_counter.setObjectName(u"sb_wisdom_counter")
-        self.sb_wisdom_counter.setMaximumSize(QSize(40, 16777215))
-        self.sb_wisdom_counter.setMinimum(0)
-        self.sb_wisdom_counter.setMaximum(30)
-        self.sb_wisdom_counter.setValue(0)
+        self.label_7 = QLabel(self.groupBox_2)
+        self.label_7.setObjectName(u"label_7")
+        self.label_7.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
 
-        self.gridLayout.addWidget(self.sb_wisdom_counter, 1, 6, 1, 2)
-
-        self.sb_tree_num = QSpinBox(self.groupBox_2)
-        self.sb_tree_num.setObjectName(u"sb_tree_num")
-        self.sb_tree_num.setMaximumSize(QSize(40, 16777215))
-        self.sb_tree_num.setMinimum(1)
-        self.sb_tree_num.setMaximum(255)
-
-        self.gridLayout.addWidget(self.sb_tree_num, 0, 2, 1, 1)
+        self.gridLayout.addWidget(self.label_7, 0, 4, 1, 1)
 
         self.sb_cur_level = QSpinBox(self.groupBox_2)
         self.sb_cur_level.setObjectName(u"sb_cur_level")
@@ -525,11 +514,42 @@ class Ui_MainWindow(object):
 
         self.gridLayout.addWidget(self.sb_cur_level, 0, 6, 1, 2)
 
-        self.label_7 = QLabel(self.groupBox_2)
-        self.label_7.setObjectName(u"label_7")
-        self.label_7.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
+        self.sb_tree_num = QSpinBox(self.groupBox_2)
+        self.sb_tree_num.setObjectName(u"sb_tree_num")
+        self.sb_tree_num.setMaximumSize(QSize(40, 16777215))
+        self.sb_tree_num.setMinimum(1)
+        self.sb_tree_num.setMaximum(255)
 
-        self.gridLayout.addWidget(self.label_7, 0, 4, 1, 1)
+        self.gridLayout.addWidget(self.sb_tree_num, 0, 2, 1, 1)
+
+        self.sb_wisdom_counter = QSpinBox(self.groupBox_2)
+        self.sb_wisdom_counter.setObjectName(u"sb_wisdom_counter")
+        self.sb_wisdom_counter.setMaximumSize(QSize(40, 16777215))
+        self.sb_wisdom_counter.setMinimum(0)
+        self.sb_wisdom_counter.setMaximum(30)
+        self.sb_wisdom_counter.setValue(0)
+
+        self.gridLayout.addWidget(self.sb_wisdom_counter, 1, 6, 1, 2)
+
+        self.horizontalSpacer_2 = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
+
+        self.gridLayout.addItem(self.horizontalSpacer_2, 0, 3, 1, 1)
+
+        self.label_6 = QLabel(self.groupBox_2)
+        self.label_6.setObjectName(u"label_6")
+
+        self.gridLayout.addWidget(self.label_6, 0, 1, 1, 1)
+
+        self.label_9 = QLabel(self.groupBox_2)
+        self.label_9.setObjectName(u"label_9")
+        self.label_9.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
+        self.label_9.setWordWrap(True)
+
+        self.gridLayout.addWidget(self.label_9, 2, 1, 1, 4)
+
+        self.horizontalSpacer = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
+
+        self.gridLayout.addItem(self.horizontalSpacer, 1, 0, 2, 1)
 
         self.sb_magic_counter = QSpinBox(self.groupBox_2)
         self.sb_magic_counter.setObjectName(u"sb_magic_counter")
@@ -540,25 +560,21 @@ class Ui_MainWindow(object):
 
         self.gridLayout.addWidget(self.sb_magic_counter, 2, 6, 1, 2)
 
-        self.label_9 = QLabel(self.groupBox_2)
-        self.label_9.setObjectName(u"label_9")
-        self.label_9.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
-        self.label_9.setWordWrap(True)
+        self.sb_learning_level = QSpinBox(self.groupBox_2)
+        self.sb_learning_level.setObjectName(u"sb_learning_level")
+        self.sb_learning_level.setMaximumSize(QSize(40, 16777215))
+        self.sb_learning_level.setMinimum(0)
+        self.sb_learning_level.setMaximum(30)
+        self.sb_learning_level.setValue(1)
 
-        self.gridLayout.addWidget(self.label_9, 2, 1, 1, 4)
+        self.gridLayout.addWidget(self.sb_learning_level, 3, 6, 1, 2)
 
-        self.label_6 = QLabel(self.groupBox_2)
-        self.label_6.setObjectName(u"label_6")
+        self.label_13 = QLabel(self.groupBox_2)
+        self.label_13.setObjectName(u"label_13")
+        self.label_13.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
+        self.label_13.setWordWrap(True)
 
-        self.gridLayout.addWidget(self.label_6, 0, 1, 1, 1)
-
-        self.horizontalSpacer = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
-
-        self.gridLayout.addItem(self.horizontalSpacer, 1, 0, 2, 1)
-
-        self.horizontalSpacer_2 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
-
-        self.gridLayout.addItem(self.horizontalSpacer_2, 0, 3, 1, 1)
+        self.gridLayout.addWidget(self.label_13, 3, 1, 1, 4)
 
 
         self.verticalLayout_3.addLayout(self.gridLayout)
@@ -761,7 +777,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.tabWidget.setCurrentIndex(0)
+        self.tabWidget.setCurrentIndex(1)
         self.cmb_start1_level.setCurrentIndex(1)
         self.cmb_start2_level.setCurrentIndex(1)
         self.cmb_skill1_level.setCurrentIndex(1)
@@ -778,7 +794,7 @@ class Ui_MainWindow(object):
     # setupUi
 
     def retranslateUi(self, MainWindow):
-        MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"Hota tree calc 1.07", None))
+        MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"Hota tree calc 1.08", None))
         self.label.setText(QCoreApplication.translate("MainWindow", u"Hero class", None))
         self.btn_ban_skill.setText(QCoreApplication.translate("MainWindow", u"Ban skill:", None))
         self.label_4.setText(QCoreApplication.translate("MainWindow", u"Banned skills:", None))
@@ -859,8 +875,9 @@ class Ui_MainWindow(object):
         self.groupBox_2.setTitle("")
         self.label_8.setText(QCoreApplication.translate("MainWindow", u"Last level wisdom given", None))
         self.label_7.setText(QCoreApplication.translate("MainWindow", u"Cur. level", None))
-        self.label_9.setText(QCoreApplication.translate("MainWindow", u"Last level magic given", None))
         self.label_6.setText(QCoreApplication.translate("MainWindow", u"Tree \u2116", None))
+        self.label_9.setText(QCoreApplication.translate("MainWindow", u"Last level magic given", None))
+        self.label_13.setText(QCoreApplication.translate("MainWindow", u"Last level learning given", None))
         self.label_10.setText(QCoreApplication.translate("MainWindow", u"PRIM", None))
         self.btn_build_tree.setText(QCoreApplication.translate("MainWindow", u"Build tree", None))
         self.btn_export_all_trees.setText(QCoreApplication.translate("MainWindow", u"Export all trees", None))
@@ -884,7 +901,7 @@ class Ui_MainWindow(object):
 "li.unchecked::marker { content: \"\\2610\"; }\n"
 "li.checked::marker { content: \"\\2612\"; }\n"
 "</style></head><body style=\" font-family:'Segoe UI'; font-size:14pt; font-weight:700; font-style:normal;\">\n"
-"<p align=\"center\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:20pt;\">Hota tree calc 1.07</span></p>\n"
+"<p align=\"center\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:20pt;\">Hota tree calc 1.08</span></p>\n"
 "<p align=\"center\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Author: Temig (temig7487@gmail.com)</p>\n"
 "<p align=\"center\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-inden"
                         "t:0px;\">Idea and design based on <a href=\"https://handbookhmm.ru/forum/viewtopic.php?f=8&amp;t=42\"><span style=\" text-decoration: underline; color:#0078d4;\">LMOracle.</span></a> Thanks to it's author - AlexSpl</p>\n"

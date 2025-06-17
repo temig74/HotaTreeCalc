@@ -1,4 +1,7 @@
 # HotaTreeCalc
+Hota tree calc 1.08 changes:
+- learning advance fix: in Hota 1.7.3 learning can't be advanced, if it was advanced in previous level and there are other skills to advance
+
 Hota tree calc 1.07 changes:
 - added different images of skills based on skill level in tree browser
 
