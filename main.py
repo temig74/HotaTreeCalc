@@ -204,7 +204,7 @@ class TreeCalc(QMainWindow):
             self.ui.label_7.setText('Cur. level')
             self.ui.label_8.setText('Last level wisdom given')
             self.ui.label_9.setText('Last level magic given')
-            self.ui.label_13.setText('Last level learning given')
+            self.ui.label_13.setText('Last level learning adv.')
             self.ui.label_10.setText('PRIM')
             self.ui.btn_build_tree.setFont(QFont('Segoe UI', 9))
             self.ui.btn_build_tree.setText('Build tree')
@@ -542,6 +542,7 @@ class TreeCalc(QMainWindow):
         hero_class = hero_classes_ru.get(self.ui.cmb_hero_class.currentText(), self.ui.cmb_hero_class.currentText())
         wisdom_counter = 0
         magic_counter = 0
+        learning_level = 1
 
         if self.ui.cmb_start_1.currentIndex() > 0 and self.ui.cmb_start1_level.currentIndex() > 0:
             hero_skills[self.ui.cmb_start_1.currentText()] = self.ui.cmb_start1_level.currentIndex()
@@ -556,8 +557,12 @@ class TreeCalc(QMainWindow):
 
         if self.ui.cmb_choice2.currentIndex() == 0:
             hero_skills[self.ui.cmb_left2.currentText()] = hero_skills.get(self.ui.cmb_left2.currentText(), 0) + 1
+            if self.ui.cmb_left2.currentText() == 'learning':
+                learning_level = 2
         else:
             hero_skills[self.ui.cmb_right2.currentText()] = hero_skills.get(self.ui.cmb_right2.currentText(), 0) + 1
+            if self.ui.cmb_right2.currentText() == 'learning':
+                learning_level = 2
 
         if self.ui.cmb_left2.currentText() == 'wisdom' or self.ui.cmb_right2.currentText() == 'wisdom':
             wisdom_counter = 2
@@ -569,8 +574,12 @@ class TreeCalc(QMainWindow):
 
             if self.ui.cmb_choice3.currentIndex() == 0:
                 hero_skills[self.ui.cmb_left3.currentText()] = hero_skills.get(self.ui.cmb_left3.currentText(), 0) + 1
+                if self.ui.cmb_left3.currentText() == 'learning':
+                    learning_level = 3
             else:
                 hero_skills[self.ui.cmb_right3.currentText()] = hero_skills.get(self.ui.cmb_right3.currentText(), 0) + 1
+                if self.ui.cmb_right3.currentText() == 'learning':
+                    learning_level = 3
 
             if self.ui.cmb_left3.currentText() == 'wisdom' or self.ui.cmb_right3.currentText() == 'wisdom':
                 wisdom_counter = 3
@@ -586,7 +595,9 @@ class TreeCalc(QMainWindow):
                              '',
                              None,
                              wisdom_counter,
-                             magic_counter)
+                             magic_counter,
+                             '',
+                             learning_level)
             next_l, next_r, pri = hero.get_next_levelup()
             self.ui.lw_tree_numbers.addItem(f'{tree_num} {next_l.chosen_skill[:7]} {next_r.chosen_skill[:7]}')
 
