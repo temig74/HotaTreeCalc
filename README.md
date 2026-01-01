@@ -1,4 +1,7 @@
 # HotaTreeCalc
+Hota tree calc 1.09 changes:
+- added new hero classes: chieftains and elders
+
 Hota tree calc 1.08 changes:
 - learning advance fix: in Hota 1.7.3 learning can't be advanced, if it was advanced in previous level and there are other skills to advance
 

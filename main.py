@@ -520,7 +520,7 @@ class TreeCalc(QMainWindow):
         if self.ui.cmb_hero_class.currentText() in ('beastmaster', 'повелитель зверей'):
             self.ui.cmb_start_1.setCurrentText('armorer')
 
-        if self.ui.cmb_hero_class.currentText() in ('cleric', 'druid', 'wizard', 'heretic', 'warlock', 'battle mage', 'witch', 'elementalist', 'navigator', 'artificer', 'священник', 'друид', 'волшебник', 'еретик', 'чернокнижник', 'боевой маг', 'ведьма', 'элементалист', 'навигатор', 'изобретатель'):
+        if self.ui.cmb_hero_class.currentText() in ('cleric', 'druid', 'wizard', 'heretic', 'warlock', 'battle mage', 'witch', 'elementalist', 'navigator', 'artificer', 'elder', 'священник', 'друид', 'волшебник', 'еретик', 'чернокнижник', 'боевой маг', 'ведьма', 'элементалист', 'навигатор', 'изобретатель', 'старейшина'):
             self.ui.cmb_start_1.setCurrentText('wisdom')
 
     def enable_3_lev(self):

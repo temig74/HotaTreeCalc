@@ -210,7 +210,7 @@
        <string notr="true"/>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>2</number>
       </property>
       <property name="tabsClosable">
        <bool>false</bool>
@@ -1795,7 +1795,7 @@
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:14pt; font-weight:600; font-style:normal;&quot;&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:20pt; font-weight:696;&quot;&gt;Hota tree calc 1.08&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:20pt; font-weight:696;&quot;&gt;Hota tree calc 1.09&lt;/span&gt;&lt;/p&gt;
 &lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-weight:696;&quot;&gt;Author: Temig (temig7487@gmail.com)&lt;/span&gt;&lt;/p&gt;
 &lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-weight:696;&quot;&gt;Idea and design based on &lt;/span&gt;&lt;a href=&quot;https://handbookhmm.ru/forum/viewtopic.php?f=8&amp;amp;t=42&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-weight:696; text-decoration: underline; color:#0078d4;&quot;&gt;LMOracle.&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-weight:696;&quot;&gt; Thanks to it's author - AlexSpl&lt;/span&gt;&lt;/p&gt;
 &lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-weight:696;&quot;&gt;Some information about tree generation can be found &lt;/span&gt;&lt;a href=&quot;http://heroescommunity.com/viewthread.php3?TID=17812&amp;amp;pagenumber=12&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-weight:696; text-decoration: underline; color:#0078d4;&quot;&gt;here&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
